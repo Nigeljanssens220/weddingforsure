@@ -41,7 +41,7 @@ export const authOptions: NextAuthOptions = {
       credentials: {
         password: { label: 'Password', type: 'password' },
       },
-      authorize(credentials, req) {
+      authorize(credentials) {
         const password = credentials?.password
         const isValidPassword = password === env.VERY_SECRET_PASSWORD
 
