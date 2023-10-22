@@ -20,6 +20,7 @@ export const env = createEnv({
       // VERCEL_URL doesn't include `https` so it cant be validated as a URL
       process.env.VERCEL ? z.string() : z.string().url(),
     ),
+    VERY_SECRET_PASSWORD: z.literal('MiyusParty'),
   },
   /**
    * Specify your client-side environment variables schema here. This way you can ensure the app
@@ -39,6 +40,7 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+    VERY_SECRET_PASSWORD: process.env.VERY_SECRET_PASSWORD,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
