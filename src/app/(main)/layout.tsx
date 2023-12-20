@@ -1,10 +1,12 @@
-import Navbar from '../_components/navbar/navbar'
+import Navbar from "../_components/navbar/navbar"
 
-export default function PageLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      <Navbar />
-      {children}
-    </>
-  )
+export default function PageLayout({
+	children,
+}: { children: React.ReactNode }) {
+	return (
+		<>
+			<Navbar />
+			{children}
+		</>
+	)
 }

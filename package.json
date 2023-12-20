@@ -30,7 +30,7 @@
     "drizzle-orm": "^0.29.0",
     "framer-motion": "^10.16.12",
     "lucide-react": "^0.294.0",
-    "next": "^14.0.3",
+    "next": "latest",
     "next-auth": "^4.24.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -42,6 +42,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.4.1",
     "@types/eslint": "^8.44.7",
     "@types/node": "^20.10.0",
     "@types/react": "^18.2.39",
@@ -57,7 +58,7 @@
     "postcss": "^8.4.31",
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
-    "tailwindcss": "insiders",
+    "tailwindcss": "latest",
     "typescript": "^5.3.2"
   },
   "ct3aMetadata": {
