@@ -84,7 +84,7 @@ export function Menu({ className }: { className?: string }) {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className={cn('relative self-end bg-pink-500', className)}>
+    <div className={cn('relative self-end', className)}>
       <AnimatePresence>
         {open && (
           <motion.div
