@@ -15,6 +15,7 @@
     "@auth/drizzle-adapter": "^0.3.12",
     "@formkit/auto-animate": "^0.8.1",
     "@hookform/resolvers": "^3.3.3",
+    "@notionhq/client": "^2.2.14",
     "@planetscale/database": "^1.13.0",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
     "@radix-ui/react-label": "^2.0.2",

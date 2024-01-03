@@ -12,7 +12,7 @@ export default function Home() {
       <main className="container relative flex h-screen w-screen max-w-screen-2xl flex-col items-center justify-start gap-20 overflow-x-hidden p-0">
         <Image
           quality={100}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           src={nigelAndShintaG}
           alt="nigel-and-shinta-g"
           className="absolute -z-10 bg-white bg-opacity-10 object-cover object-bottom text-transparent"
