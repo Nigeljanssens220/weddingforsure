@@ -21,6 +21,7 @@ export default function Home() {
           <Typography variant="xl/regular" className="text-balance uppercase">
             you&apos;re invited to the wedding of
           </Typography>
+
           <div className="flex flex-col text-center">
             <Hero variant="light">Shinta</Hero>
             <Typography variant="xl/regular" className="uppercase">

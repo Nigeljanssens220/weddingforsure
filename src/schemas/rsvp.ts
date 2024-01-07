@@ -1,13 +1,19 @@
+import { rsvpOptions } from '@/lib/rsvp'
 import { z } from 'zod'
 
 export const schemaCreateRSVP = z.object({
   person: z.array(
     z.object({
-      name: z.string().min(1).max(100),
-      email: z.string().email(),
-      dietaryWishes: z.string().max(256).optional(),
+      name: z
+        .string()
+        .min(1, { message: 'Vul je volledige naam in' })
+        .max(100, { message: 'Je naam is te lang, fucked up' }),
+      email: z.string().email({ message: 'Vul een geldig email adres in' }),
+      dietaryRestrictions: z.string().max(256, { message: 'Mag maximaal 256 karakters bevatten' }).optional(),
     }),
   ),
+  rsvpOptions: z.enum(rsvpOptions),
+  rsvpOptionsOther: z.string().max(256, { message: 'Mag maximaal 256 karakters bevatten' }).optional(),
 })
 
 export type SchemaCreateRSVP = z.infer<typeof schemaCreateRSVP>

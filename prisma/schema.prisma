@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "mysql"
+  url = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+// model Rsvp {
+//     id        Int      @id @default(autoincrement())
+//     createdAt DateTime @default(now())
+//     updatedAt DateTime @updatedAt
+
+//     createdBy   User   @relation(fields: [createdById], references: [id])
+//     createdById String
+
+//     dietaryRestrictions String?
+//     attendsWithId String?
+
+//     @@index([id])
+//     @@index([createdById])
+// }
+
+
+// model User {
+//     id            String    @id @default(cuid())
+//     name          String?
+//     email         String?   @unique
+//     rsvp         Rsvp[]
+
+//     @@index([email])
+// }
+
+model Rsvp {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  nameA String
+  nameB String? 
+
+  emailA String @unique
+  emailB String? @unique
+
+  dietaryRestrictionsA String?
+  dietaryRestrictionsB String?
+
+  rsvpOptions String
+  rsvpOptionsOther String?
+
+  @@index([id])
+  @@index([emailA])
+}

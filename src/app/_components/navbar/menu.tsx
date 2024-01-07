@@ -1,6 +1,6 @@
 'use client'
 
-import { routes } from '@/lib/ routes'
+import { routes } from '@/lib/routes'
 import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import { MenuIcon, X } from 'lucide-react'

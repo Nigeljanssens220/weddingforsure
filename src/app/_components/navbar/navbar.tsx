@@ -1,4 +1,4 @@
-import { routes } from '@/lib/ routes'
+import { routes } from '@/lib/routes'
 import Link from 'next/link'
 import Typography from '../ui/typography'
 import { Menu } from './menu'
