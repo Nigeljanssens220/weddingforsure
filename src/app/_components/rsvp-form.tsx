@@ -19,7 +19,7 @@ export default function RsvpForm() {
   const createRsvp = api.rsvp.create.useMutation()
 
   const formMethods = useForm<SchemaCreateRSVP>({
-    mode: 'onTouched',
+    mode: 'onSubmit',
     resolver: zodResolver(schemaCreateRSVP),
     defaultValues: {
       person: [
