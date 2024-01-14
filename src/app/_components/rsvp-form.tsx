@@ -1,7 +1,7 @@
 'use client'
 
 import { rsvpOptions } from '@/lib/rsvp'
-import { SchemaCreateRSVP, schemaCreateRSVP } from '@/schemas/rsvp'
+import { schemaCreateRSVP, type SchemaCreateRSVP } from '@/schemas/rsvp'
 import { api } from '@/trpc/react'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 import { DevTool } from '@hookform/devtools'

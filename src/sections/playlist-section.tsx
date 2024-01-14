@@ -14,7 +14,7 @@ export function PlaylistSection() {
       </Typography>
       <Link
         href="#"
-        className="w-full border border-white bg-[#87926A] px-4 py-2 text-white ring-1 ring-[#87926A] hover:bg-opacity-90"
+        className="w-full border border-white bg-[#87926A] px-4 py-2 text-white ring-1 ring-[#87926A] hover:bg-opacity-90 "
       >
         Join now!
       </Link>
