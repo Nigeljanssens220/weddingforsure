@@ -107,6 +107,9 @@ dependencies:
   react-hook-form:
     specifier: ^7.49.2
     version: 7.49.2(react@18.2.0)
+  react-spotify-embed:
+    specifier: ^2.0.3
+    version: 2.0.3
   sharp:
     specifier: ^0.33.1
     version: 0.33.1
@@ -4667,6 +4670,14 @@ packages:
     dependencies:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
+
+  /react-spotify-embed@2.0.3:
+    resolution: {integrity: sha512-buiiaaPrGTyOlciJFJiHz1o2a4iSJMuH9ewi2KaIjVGcedz6szM8plz7Y6HtcDxApxCv2Rwx38xS1z8Zs3M/ZA==}
+    engines: {node: '>=14'}
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
