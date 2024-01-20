@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export function LocationSection() {
   return (
-    <div id="location" className="flex h-dvh w-screen flex-col items-center gap-10 px-10 py-10 text-center">
+    <div id="location" className="flex w-screen max-w-screen-md flex-col items-center gap-10 px-10 py-10 text-center ">
       <Typography as="h3" className="text-3xl font-semibold">
         Locatie
       </Typography>

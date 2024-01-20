@@ -5,7 +5,6 @@ import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import { MenuIcon, X } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useState } from 'react'
 import nigelAndShintaG from '../../../../public/images/cocktail.svg'
 import Typography from '../ui/typography'
@@ -124,7 +123,7 @@ export function Menu({ className }: { className?: string }) {
                           variants={mobileLinkAnimation}
                           className="text-lg uppercase text-[#5D5C4E] sm:text-xl lg:text-2xl"
                         >
-                          <Link href={href}>{label}</Link>
+                          <a href={href}>{label}</a>
                         </motion.div>
                       </li>
                     ))}
@@ -153,7 +152,7 @@ export function Menu({ className }: { className?: string }) {
         )}
       </AnimatePresence>
       <button type="button" className="px-4 py-2" onClick={() => setOpen(true)}>
-        <MenuIcon className="h-6 w-6 text-foreground" />
+        <MenuIcon className="h-6 w-6 text-background" />
       </button>
     </div>
   )

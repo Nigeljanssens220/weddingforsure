@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export function RSVPSection() {
   return (
-    <div id="rsvp" className="flex h-dvh w-screen flex-col items-center gap-10 px-10 py-10 text-center">
+    <div id="rsvp" className="flex w-screen max-w-screen-md flex-col items-center gap-10 px-10 py-10 text-center ">
       <Image src="/images/cocktail.svg" alt="cocktail" width={90} height={300} quality={100} />
       <Typography as="h3" className="text-3xl font-semibold">
         You&apos;re invited!

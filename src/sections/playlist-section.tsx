@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export function PlaylistSection() {
   return (
-    <div id="playlist" className="flex h-dvh w-screen flex-col items-center gap-10 px-10 py-10 text-center">
+    <div id="playlist" className="flex  w-screen max-w-screen-md flex-col items-center gap-10 px-10 py-10 text-center">
       <Typography as="h3" className="text-3xl font-semibold">
         The Wedding Playlist
       </Typography>

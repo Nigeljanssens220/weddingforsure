@@ -22,6 +22,9 @@ export const env = createEnv({
     ),
     VERY_SECRET_PASSWORD: z.literal('MiyusParty'),
     NOTION_TOKEN: z.string(),
+    CLOUDINARY_API_KEY: z.string(),
+    CLOUDINARY_API_SECRET: z.string(),
+    CLOUDINARY_FOLDER: z.literal('wedding'),
   },
   /**
    * Specify your client-side environment variables schema here. This way you can ensure the app
@@ -30,6 +33,7 @@ export const env = createEnv({
    */
   client: {
     // NEXT_PUBLIC_CLIENTVAR: z.string(),
+    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: z.string(),
   },
 
   /**
@@ -43,6 +47,10 @@ export const env = createEnv({
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
     VERY_SECRET_PASSWORD: process.env.VERY_SECRET_PASSWORD,
     NOTION_TOKEN: process.env.NOTION_TOKEN,
+    CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
+    CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET,
+    CLOUDINARY_FOLDER: process.env.CLOUDINARY_FOLDER,
+    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially

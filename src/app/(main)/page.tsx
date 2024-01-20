@@ -12,7 +12,7 @@ export const dynamic = 'force-static'
 export default function Home() {
   return (
     <>
-      <main className="container relative flex min-h-dvh w-screen max-w-screen-2xl flex-col items-center justify-start overflow-x-hidden p-0">
+      <main className="relative flex flex-col items-center justify-start overflow-x-hidden p-0">
         <HomeSection />
         <RSVPSection />
         <PageBreak />

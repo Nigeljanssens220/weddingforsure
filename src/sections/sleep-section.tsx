@@ -3,7 +3,10 @@ import Image from 'next/image'
 
 export function SleepSection() {
   return (
-    <div id="sleep" className="flex h-dvh w-screen flex-col items-center gap-10 px-10 py-10 text-center">
+    <div
+      id="sleep"
+      className="min-h-h-dvh flex w-screen max-w-screen-md flex-col items-center gap-10 px-10 py-10 text-center "
+    >
       <Typography as="h3" className="text-3xl font-semibold">
         Overnachten
       </Typography>
