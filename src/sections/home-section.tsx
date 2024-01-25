@@ -25,7 +25,8 @@ export function HomeSection() {
           </Typography>
           <Hero variant="light">Nigel</Hero>
         </div>
-        <a href="#rsvp" className="absolute bottom-4 left-[50%] animate-bounce">
+        <a href="#rsvp" className="absolute bottom-4 left-[48%] animate-bounce">
+          <span className="sr-only">scroll to rsvp</span>
           <ChevronDown className="h-8 w-8 text-white" />
         </a>
       </div>
