@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react'
 import { signIn } from 'next-auth/react'
 import { useSearchParams } from 'next/navigation'
 import { useForm } from 'react-hook-form'
+import PuffLoader from 'react-spinners/PuffLoader'
 import * as z from 'zod'
 import { Form, FormControl, FormField, FormItem, FormMessage } from './ui/form'
 
@@ -52,7 +53,12 @@ export function LoginForm() {
                   />
                 </FormControl>
                 <button type="submit" className="p-4">
-                  <ArrowRight className="-mr-4 h-4 w-4" />
+                  <span className="sr-only">Inloggen</span>
+                  {form.formState.isSubmitting ? (
+                    <PuffLoader color="#000000" size={16} className="-mr-4" />
+                  ) : (
+                    <ArrowRight className="-mr-4 size-4" />
+                  )}
                 </button>
               </div>
               <FormMessage className="text-primary" />
