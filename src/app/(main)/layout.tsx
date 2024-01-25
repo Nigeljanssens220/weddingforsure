@@ -4,7 +4,7 @@ export default function PageLayout({ children }: { children: React.ReactNode }) 
   return (
     <>
       <Navbar />
-      <main className="min-h-svh">{children}</main>
+      <main className="min-h-dvh">{children}</main>
     </>
   )
 }

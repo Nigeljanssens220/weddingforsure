@@ -3,10 +3,7 @@ import Typography from '@/app/_components/ui/typography'
 
 export function TimelineSection() {
   return (
-    <div
-      id="timeline"
-      className="flex h-dvh w-screen max-w-screen-md flex-col items-center gap-10 px-10 py-10 text-center"
-    >
+    <div id="timeline" className="flex w-screen max-w-screen-md flex-col items-center gap-10 px-10 py-10 text-center">
       <Typography as="h3" className="text-3xl font-semibold">
         Tijdlijn
       </Typography>
