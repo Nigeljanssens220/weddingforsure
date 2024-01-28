@@ -5,5 +5,5 @@ export const routes = [
   { label: 'Stays', href: '/#stays' },
   { label: 'Theme', href: '/#theme' },
   { label: 'RSVP', href: '/rsvp' },
-  { label: 'FAQ', href: '/#faq' },
+  { label: 'FAQ', href: '/faq' },
 ] as const
