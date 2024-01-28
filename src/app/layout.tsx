@@ -5,7 +5,6 @@ import { TRPCReactProvider } from '@/trpc/react'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { GeistSans } from 'geist/font/sans'
-import { Cormorant_Garamond } from 'next/font/google'
 import { headers } from 'next/headers'
 export const metadata = {
   ...siteConfig,
@@ -20,16 +19,9 @@ const SLIGHT = localFont({
   variable: '--font-slight',
 })
 
-const GARAMOND = Cormorant_Garamond({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['600', '700'],
-  variable: '--font-garamond',
-})
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${SLIGHT.variable} ${GARAMOND.className} ${GeistSans.variable}`}>
+    <html lang="en" className={`${SLIGHT.variable} ${GeistSans.className}`}>
       <body>
         <TRPCReactProvider headers={headers()}>{children}</TRPCReactProvider>
         <Analytics />

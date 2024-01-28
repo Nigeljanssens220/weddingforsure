@@ -8,24 +8,33 @@ export const dynamic = 'force-static'
 const FAQ = () => {
   return (
     <section className="my-20 selection:bg-foreground selection:text-background md:my-32">
-      <article className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
-        <Typography className="max-w-lg text-balance text-4xl md:text-7xl" as="h2">
+      <div className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
+        <Typography className="max-w-lg text-4xl md:text-7xl" as="h2">
           Bruiloft en thema
         </Typography>
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-1">
-            <Typography className="font-geist text-balance text-xl font-semibold" as="h3">
+        <article className="space-y-8">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
+              Huh, het zou toch op 3 augustus 2024 plaatsvinden?
+            </Typography>
+            <Typography as="p">
+              Dat klopt. Omdat wij hebben besloten om last minute van locatie te veranderen, hebben wij de bruiloft
+              moeten verplaatsen naar 7 augustus 2024!
+            </Typography>
+          </div>
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Is mijn plus één welkom?
             </Typography>
-            <Typography as="p" className="font-geist ">
+            <Typography as="p">
               Dit vonden wij een hele moeilijke keuze. We willen natuurlijk het liefst al onze vrienden en familie
               uitnodigen, maar helaas is dat voor ons niet mogelijk. Kijk daarom goed naar de uitnodiging of de
               uitnodiging geadresseerd is aan jou en je partner. Als dit het geval is, zijn jullie van harte harte
               welkom! Als dit niet het geval is, dan is het helaas niet mogelijk om een plus één mee te nemen.
             </Typography>
           </div>
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Mag ik mijn kinderen meenemen?
             </Typography>
             <Typography as="p">
@@ -33,8 +42,8 @@ const FAQ = () => {
               keuze. Dat betekent aan de andere kant wel dat jullie een dagje voor jezelf hebben!
             </Typography>
           </div>
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Hoe zien jullie de dress code voor je?
             </Typography>
             <Typography as="p">
@@ -52,8 +61,8 @@ const FAQ = () => {
               </Link>
             </Typography>
           </div>
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Moet ik mij kleden op het weer?
             </Typography>
             <Typography as="p">
@@ -63,16 +72,16 @@ const FAQ = () => {
               mee te nemen.
             </Typography>
           </div>
-        </div>
-      </article>
+        </article>
+      </div>
       <Separator className="col-span-2 my-16 bg-black md:my-20" />
-      <article className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
-        <Typography className="max-w-lg text-balance text-4xl md:text-7xl" as="h2">
+      <div className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
+        <Typography className="max-w-lg text-4xl md:text-7xl" as="h2">
           RSVP
         </Typography>
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+        <article className="space-y-8">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Is de RSVP verplicht?
             </Typography>
             <Typography as="p">
@@ -80,8 +89,8 @@ const FAQ = () => {
               is daarom dan ook verplicht!
             </Typography>
           </div>
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Voldoet een online RSVP of moet ik nog reageren op de uitnodiging?
             </Typography>
             <Typography as="p">
@@ -89,8 +98,8 @@ const FAQ = () => {
               je erbij kunt zijn!
             </Typography>
           </div>
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Is er een deadline om te RSVPen?
             </Typography>
             <Typography as="p">
@@ -98,16 +107,16 @@ const FAQ = () => {
               een harde deadline gesteld op XX-XX-2024 om aan te geven of je erbij kunt zijn.
             </Typography>
           </div>
-        </div>
-      </article>
+        </article>
+      </div>
       <Separator className="col-span-2 my-16 bg-black md:my-20" />
-      <article className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
-        <Typography className="max-w-lg text-balance text-4xl md:text-7xl" as="h2">
+      <div className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
+        <Typography className="max-w-lg text-4xl md:text-7xl" as="h2">
           Foto- en videografie
         </Typography>
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+        <article className="space-y-8">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Is er een foto en/of video policy?
             </Typography>
             <Typography as="p">
@@ -120,16 +129,16 @@ const FAQ = () => {
               Daarnaast hebben wij een team aan professionele foto- en videografen die de hele dag aanwezig zullen zijn.
             </Typography>
           </div>
-        </div>
-      </article>
+        </article>
+      </div>
       <Separator className="col-span-2 my-16 bg-black md:my-20" />
-      <article className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
-        <Typography className="max-w-lg text-balance text-4xl md:text-7xl" as="h2">
+      <div className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
+        <Typography className="max-w-lg text-4xl md:text-7xl" as="h2">
           Locatie, verblijf en transport
         </Typography>
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+        <article className="space-y-8">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Vindt de bruiloft binnen of buiten plaats?
             </Typography>
             <Typography as="p">
@@ -138,8 +147,8 @@ const FAQ = () => {
               natuurlijk Nederland, dus bij slecht weer zal de ceremonie ook naar binnen verplaatsen of onder een tent.
             </Typography>
           </div>
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Wat is het adres van de trouwlocatie?
             </Typography>
             <a
@@ -158,8 +167,8 @@ const FAQ = () => {
               3971 KE &nbsp;&nbsp;Driebergen-Rijsenburg
             </Typography>
           </div>
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Hoe zit het met de parkeergelegenheid?
             </Typography>
             <Typography as="p">
@@ -167,8 +176,8 @@ const FAQ = () => {
               parkeerplaats te gebruiken. Deze bevindt zich op 5 minuten loopafstand van de locatie.
             </Typography>
           </div>
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Wat is de beste manier om daar te komen?
             </Typography>
             <Typography as="p">
@@ -177,8 +186,8 @@ const FAQ = () => {
               station Utrecht Centraal is het 30 minuten met de bus.
             </Typography>
           </div>
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Zijn er kamers gereserveerd voor de gasten, of waar kan ik verblijven?
             </Typography>
             <Typography as="p">
@@ -190,8 +199,8 @@ const FAQ = () => {
               genoeg interesse is, zullen wij een hotel proberen te regelen met een groepskorting.
             </Typography>
           </div>
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Is er een shuttle service van en/of naar de hotels?
             </Typography>
             <Typography as="p">
@@ -199,24 +208,24 @@ const FAQ = () => {
               graag een hotelovernachtig willen, zullen wij een shuttle service aanbieden van en naar de hotels.
             </Typography>
           </div>
-        </div>
-      </article>
+        </article>
+      </div>
       <Separator className="col-span-2 my-16 bg-black md:my-20" />
-      <article className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
-        <Typography className="max-w-lg text-balance text-4xl md:text-7xl" as="h2">
+      <div className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
+        <Typography className="max-w-lg text-4xl md:text-7xl" as="h2">
           Menu en dieetwensen
         </Typography>
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+        <article className="space-y-8">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Wat voor eten wordt er geserveerd tijdens het diner?
             </Typography>
             <Typography as="p">
               Het diner zal bestaan uit een 3 of 4-gangen menu. De menu opties zijn momenteel echter nog niet bekend.
             </Typography>
           </div>
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Zijn er alternatieven voor het diner beschikbaar?
             </Typography>
             <Typography as="p">
@@ -224,8 +233,8 @@ const FAQ = () => {
               best doen om een alternatief te regelen. Mocht dit niet lukken, dan zullen wij contact met je opnemen!
             </Typography>
           </div>
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Is er een open bar?
             </Typography>
             <Typography as="p">
@@ -233,16 +242,16 @@ const FAQ = () => {
               geselecteerde cocktails te bestellen tijdens het feest!
             </Typography>
           </div>
-        </div>
-      </article>
+        </article>
+      </div>
       <Separator className="col-span-2 my-16 bg-black md:my-20" />
-      <article className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
-        <Typography className="max-w-lg text-balance text-4xl md:text-7xl" as="h2">
+      <div className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
+        <Typography className="max-w-lg text-4xl md:text-7xl" as="h2">
           Overige vragen
         </Typography>
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+        <article className="space-y-8">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Doen jullie aan huwelijkscadeaus?
             </Typography>
             <Typography as="p">
@@ -254,8 +263,8 @@ const FAQ = () => {
               bijdrages zijn daarom altijd welkom!
             </Typography>
           </div>
-          <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+          <div className="space-y-1">
+            <Typography className="text-xl font-semibold" as="h3">
               Wie kan ik storen met al mijn vragen?
             </Typography>
             <Typography as="p">
@@ -263,8 +272,8 @@ const FAQ = () => {
               vragen. Zijn contactgegevens zijn te vinden in de uitnodiging.
             </Typography>
           </div>
-        </div>
-      </article>
+        </article>
+      </div>
     </section>
   )
 }
