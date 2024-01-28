@@ -115,6 +115,9 @@ const FAQ = () => {
               beleven. Daarvoor en daarna mag je wat ons betreft gewoon lekker je innerlijke foto- of videograaf
               uithangen. Wij zouden het wel waarderen als je de foto&apos;s en video&apos;s achteraf met ons deelt! Dit
               kan via XX.
+              <br />
+              <br />
+              Daarnaast hebben wij een team aan professionele foto- en videografen die de hele dag aanwezig zullen zijn.
             </Typography>
           </div>
         </div>
@@ -253,7 +256,7 @@ const FAQ = () => {
           </div>
           <div className="flex flex-col gap-1">
             <Typography className="text-balance text-xl font-semibold" as="h3">
-              Wie kan ik storen voor al mijn vragen?
+              Wie kan ik storen met al mijn vragen?
             </Typography>
             <Typography as="p">
               XXX is onze ceremoniemeester. Hij zal jullie op de dag zelf begeleiden en is ook bereikbaar voor al jullie
