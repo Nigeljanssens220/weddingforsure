@@ -1,6 +1,5 @@
 import { HomeSection } from '@/sections/home-section'
 import { LocationSection } from '@/sections/location-section'
-import { PlaylistSection } from '@/sections/playlist-section'
 import { RSVPSection } from '@/sections/rsvp-section'
 import { SleepSection } from '@/sections/sleep-section'
 import { ThemeSection } from '@/sections/theme-section'
@@ -23,8 +22,6 @@ export default function Home() {
         <ThemeSection />
         <PageBreak />
         <SleepSection />
-        <PageBreak />
-        <PlaylistSection />
       </main>
     </>
   )
