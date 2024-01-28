@@ -7,17 +7,17 @@ export const dynamic = 'force-static'
 
 const FAQ = () => {
   return (
-    <section className="my-20 md:my-32">
+    <section className="my-20 selection:bg-foreground selection:text-background md:my-32">
       <article className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
         <Typography className="max-w-lg text-balance text-4xl md:text-7xl" as="h2">
           Bruiloft en thema
         </Typography>
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-1">
-            <Typography className="text-balance text-xl font-semibold" as="h3">
+            <Typography className="font-geist text-balance text-xl font-semibold" as="h3">
               Is mijn plus één welkom?
             </Typography>
-            <Typography as="p">
+            <Typography as="p" className="font-geist ">
               Dit vonden wij een hele moeilijke keuze. We willen natuurlijk het liefst al onze vrienden en familie
               uitnodigen, maar helaas is dat voor ons niet mogelijk. Kijk daarom goed naar de uitnodiging of de
               uitnodiging geadresseerd is aan jou en je partner. Als dit het geval is, zijn jullie van harte harte

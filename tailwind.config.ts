@@ -12,7 +12,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-geist-sans)'],
+        geist: ['var(--font-geist-sans)'],
+        slight: ['var(--font-slight)'],
+        garamond: ['var(--font-garamond)'],
       },
       colors: {
         border: 'hsl(var(--border))',
