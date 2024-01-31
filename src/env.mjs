@@ -25,6 +25,7 @@ export const env = createEnv({
     CLOUDINARY_API_KEY: z.string(),
     CLOUDINARY_API_SECRET: z.string(),
     CLOUDINARY_FOLDER: z.literal('wedding'),
+    RESEND_API_KEY: z.string(),
   },
   /**
    * Specify your client-side environment variables schema here. This way you can ensure the app
@@ -50,6 +51,7 @@ export const env = createEnv({
     CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
     CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET,
     CLOUDINARY_FOLDER: process.env.CLOUDINARY_FOLDER,
+    RESEND_API_KEY: process.env.RESEND_API_KEY,
     NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
   },
   /**

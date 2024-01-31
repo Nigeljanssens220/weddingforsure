@@ -11,6 +11,7 @@ export const metadata = {
 }
 
 import localFont from 'next/font/local'
+import { Toaster } from './_components/ui/sonner'
 
 // Font files can be colocated inside of `app`
 const SLIGHT = localFont({
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <TRPCReactProvider headers={headers()}>{children}</TRPCReactProvider>
         <Analytics />
         <SpeedInsights />
+        <Toaster />
       </body>
     </html>
   )

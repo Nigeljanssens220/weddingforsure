@@ -11,7 +11,7 @@ export function HomeSection() {
         priority
         loading="eager"
         quality={100}
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         src="https://res.cloudinary.com/dmdewqwqf/image/upload/v1705758405/Michelle.Cole.Wedding-0248_gzyi2d.jpg"
         alt="nigel-and-shinta-g"
         className="absolute -z-20 object-cover object-top"

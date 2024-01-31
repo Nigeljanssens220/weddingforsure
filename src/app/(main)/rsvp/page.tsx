@@ -1,8 +1,6 @@
 import RsvpForm from '@/app/_components/rsvp-form'
 import Typography from '@/app/_components/ui/typography'
 
-export const dynamic = 'force-static'
-
 const RSVP = () => {
   return (
     <div className="flex w-full flex-col items-center px-3 pb-4 pt-16 selection:bg-black selection:text-[#C78686]">

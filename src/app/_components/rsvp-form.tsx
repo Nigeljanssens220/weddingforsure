@@ -1,12 +1,13 @@
 'use client'
 
+import { sendEmail } from '@/actions/send-email'
 import { rsvpOptions } from '@/lib/rsvp'
 import { schemaCreateRSVP, type SchemaCreateRSVP } from '@/schemas/rsvp'
 import { api } from '@/trpc/react'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
-import { DevTool } from '@hookform/devtools'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useFieldArray, useForm } from 'react-hook-form'
+import { toast } from 'sonner'
 import { FormRadioGroup } from './form/radio-group'
 import { FormTextArea } from './form/text-area'
 import { FormTextField } from './form/text-field'
@@ -42,12 +43,27 @@ export default function RsvpForm() {
     fields.length > 1 ? remove(-1) : append({ name: '', email: '', dietaryRestrictions: '' })
   }
 
+  const handleCreateRsvp = async (data: SchemaCreateRSVP) => {
+    // createRsvp.mutate(data)
+
+    const usernames = data.person.map((person) => person.name)
+    const emails = data.person.map((person) => person.email)
+
+    const result = await sendEmail({ username: usernames, email: ['janssensnigel@gmail.com'] })
+    if (result.error) {
+      toast.error('We konden je RSVP niet versturen. Probeer het nog eens!')
+    }
+
+    if (result.success) {
+      toast.success('Je RSVP is verstuurd!')
+    }
+  }
+
   return (
     <Form {...formMethods}>
       <form
         ref={parent}
-        // @ts-expect-error - probably types fuck it
-        onSubmit={formMethods.handleSubmit(createRsvp.mutate)}
+        onSubmit={formMethods.handleSubmit(handleCreateRsvp)}
         className="flex w-full max-w-xl flex-col gap-8 bg-[#E6D2C4] bg-opacity-50 p-8"
       >
         <Typography as="p" className="text-balance">
@@ -87,7 +103,7 @@ export default function RsvpForm() {
           {createRsvp.isLoading ? 'Submitting...' : 'Sign me up'}
         </Button>
       </form>
-      <DevTool control={formMethods.control} />
+      {/* <DevTool control={formMethods.control} /> */}
     </Form>
   )
 }
