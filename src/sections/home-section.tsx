@@ -1,11 +1,12 @@
 import Typography from '@/app/_components/ui/typography'
 
 import Hero from '@/app/_components/ui/hero'
+import { ChevronDown } from 'lucide-react'
 import Image from 'next/image'
 
 export function HomeSection() {
   return (
-    <div className="relative h-svh w-screen">
+    <div className="relative flex h-svh w-screen flex-col items-center">
       <Image
         fill
         priority
@@ -29,11 +30,11 @@ export function HomeSection() {
         <Typography variant="md/semibold" className="pt-10 text-background">
           Nodigen je uit voor hun bruiloft!
         </Typography>
-        {/* <a href="#rsvp" className="absolute bottom-4 left-[47%] animate-bounce">
-          <span className="sr-only">scroll to rsvp</span>
-          <ChevronDown className="h-8 w-8 text-white" />
-        </a> */}
       </div>
+      <a href="#rsvp" className="sticky animate-bounce pb-4">
+        <span className="sr-only">scroll to rsvp</span>
+        <ChevronDown className="h-8 w-8 text-white" />
+      </a>
     </div>
   )
 }
