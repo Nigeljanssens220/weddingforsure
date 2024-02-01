@@ -10,12 +10,12 @@ import * as z from 'zod'
 import { Form, FormControl, FormField, FormItem, FormMessage } from './ui/form'
 
 const LOGIN_ERRORS_MAP = {
-  CredentialsSignin: 'Type nou het goede wachtwoord in, joh 🙄',
+  CredentialsSignin: 'Verkeerd wachtwoord, probeer het nog eens!',
 } as const
 
 const loginSchema = z.object({
   password: z.string({
-    required_error: 'Voer een wachtwoord in, bastard bloody 👀',
+    required_error: 'Je moet wel een wachtwoord invullen, hè!',
   }),
 })
 
@@ -42,28 +42,28 @@ export function LoginForm() {
           name="password"
           render={({ field }) => (
             <FormItem className="w-full">
-              <div className="flex rounded-full border border-[#9F9F9F] bg-[#C9C9C9] px-8 shadow-100">
+              <div className="flex bg-white pl-4 shadow-100">
                 <FormControl>
                   <input
                     type="password"
                     {...field}
                     autoComplete="current-password"
                     placeholder="Ons geheime wachtwoord"
-                    className="focus w-full bg-transparent placeholder:text-sm placeholder:text-muted-foreground focus-visible:outline-none"
+                    className="focus w-full bg-transparent text-black placeholder:text-sm placeholder:text-muted-foreground focus-visible:outline-none"
                   />
                 </FormControl>
-                <button type="submit" className="p-4">
+                <button type="submit" className="bg-black px-6 py-4">
                   <span className="sr-only">Inloggen</span>
                   {form.formState.isSubmitting ? (
-                    <PuffLoader color="#000000" size={16} className="-mr-4" />
+                    <PuffLoader color="#FFFFFF" size={16} />
                   ) : (
-                    <ArrowRight className="-mr-4 size-4" />
+                    <ArrowRight className="size-4 text-white" />
                   )}
                 </button>
               </div>
-              <FormMessage className="text-primary" />
+              <FormMessage className="text-background" />
               {!!error && (
-                <p className={'text-sm font-medium text-primary'}>
+                <p className={'text-sm font-medium text-background'}>
                   {LOGIN_ERRORS_MAP[error as keyof typeof LOGIN_ERRORS_MAP]}
                 </p>
               )}

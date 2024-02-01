@@ -5,14 +5,13 @@ import Image from 'next/image'
 
 export function HomeSection() {
   return (
-    <div className="relative h-dvh w-screen">
+    <div className="relative h-lvh w-screen">
       <Image
         fill
         priority
         loading="eager"
-        quality={100}
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-        src="https://res.cloudinary.com/dmdewqwqf/image/upload/v1705758405/Michelle.Cole.Wedding-0248_gzyi2d.jpg"
+        src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_1920,f_auto,q_auto/v1705758405/Michelle.Cole.Wedding-0248_gzyi2d.jpg"
         alt="nigel-and-shinta-g"
         className="absolute -z-20 object-cover object-top"
       />
@@ -21,7 +20,7 @@ export function HomeSection() {
         <Hero variant="light" className="font-slight">
           Shinta
         </Hero>
-        <Typography as="span" variant="xl/regular" className="font-garamond -mt-4 tracking-widest text-white">
+        <Typography as="span" variant="xl/regular" className="-mt-4 font-garamond tracking-widest text-white">
           EN
         </Typography>
         <Hero variant="light" className="font-slight">

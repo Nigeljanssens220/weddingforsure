@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import nigelAndShintaG from '../../../../public/images/Michelle.Cole.Wedding-0248.jpg'
 import { LoginForm } from '../../_components/login-form'
 import Hero from '../../_components/ui/hero'
 import Typography from '../../_components/ui/typography'
@@ -8,29 +7,27 @@ export const dynamic = 'force-static'
 
 export default function Login() {
   return (
-    <main className="relative m-0 flex h-screen w-screen flex-col items-center justify-start gap-20 overflow-hidden p-0">
+    <main className="relative flex h-lvh flex-col items-center justify-center overflow-x-hidden p-0">
       <Image
-        quality={100}
-        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        src={nigelAndShintaG}
         fill
-        placeholder="blur"
+        priority
+        loading="eager"
+        quality={100}
+        src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_1920,f_auto,q_100/v1705758405/Michelle.Cole.Wedding-0248_gzyi2d.jpg"
         alt="nigel-and-shinta-g"
-        className="absolute -z-10 bg-white bg-opacity-10 object-cover object-bottom text-transparent"
+        className="absolute -z-20 object-cover object-top"
       />
-      <div className="mt-20 flex flex-col text-center">
-        <Typography variant="xl/regular" className="text-balance uppercase">
-          you&apos;re invited to the wedding of
-        </Typography>
-        <div className="flex flex-col text-center">
+      <div className="absolute top-0 -z-10 h-dvh w-screen bg-black bg-opacity-40" />
+      <div className="flex flex-col items-center gap-20 text-center text-background">
+        <div className="flex flex-col gap-4 text-start font-slight">
           <Hero variant="light">Shinta</Hero>
-          <Typography variant="xl/regular" className="uppercase">
-            and
+          <Typography variant="xl/regular" className="self-center uppercase text-white">
+            &amp;
           </Typography>
           <Hero variant="light">Nigel</Hero>
         </div>
+        <LoginForm />
       </div>
-      <LoginForm />
     </main>
   )
 }
