@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export function HomeSection() {
   return (
-    <div className="relative h-lvh w-screen">
+    <div className="relative h-svh w-screen">
       <Image
         fill
         priority
@@ -15,7 +15,7 @@ export function HomeSection() {
         alt="nigel-and-shinta-g"
         className="absolute -z-20 object-cover object-top"
       />
-      <div className="absolute top-0 -z-10 h-dvh w-screen bg-black bg-opacity-40" />
+      <div className="absolute top-0 -z-10 h-svh w-screen bg-black bg-opacity-40" />
       <div className="container mt-20 flex h-full flex-col justify-center gap-8 text-center text-white md:mt-32 md:justify-center">
         <Hero variant="light" className="font-slight">
           Shinta
