@@ -49,7 +49,10 @@ export default function RsvpForm() {
     const usernames = data.person.map((person) => person.name)
     const emails = data.person.map((person) => person.email)
 
-    const result = await sendEmail({ username: usernames, email: ['janssensnigel@gmail.com'] })
+    const result = await sendEmail({
+      username: usernames,
+      email: emails,
+    })
     if (result.error) {
       toast.error('We konden je RSVP niet versturen. Probeer het nog eens!')
     }

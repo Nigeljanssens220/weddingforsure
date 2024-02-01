@@ -1,6 +1,5 @@
-import { Body, Container, Head, Heading, Html, Preview, Text } from '@react-email/components'
+import { Body, Container, Head, Heading, Html, Img, Link, Preview, Section, Text } from '@react-email/components'
 import { Tailwind } from '@react-email/tailwind'
-
 interface RSVPSuccessProps {
   username: string[]
 }
@@ -25,15 +24,23 @@ export const RSVPSuccess = ({ username }: RSVPSuccessProps) => {
       <Tailwind>
         <Body className="mx-auto my-auto bg-white px-2 font-sans">
           <Container className="mx-auto my-[40px]  max-w-[465px] rounded border border-solid border-black p-[20px]">
-            <Heading className="mx-0 my-[30px] p-0 text-center text-[24px] font-normal text-black">
-              {headingText}
-            </Heading>
+            <Section className="mx-auto my-8 w-full">
+              <Img
+                src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_200,f_auto,q_100/v1706796977/wedding/rfun3wmzhdpfta2vw2hw.png"
+                className="mx-auto"
+              />
+            </Section>
+            <Heading className="mx-0 my-8 p-0 text-center text-[24px] font-normal text-black">{headingText}</Heading>
             <Text className="text-[14px] leading-[24px] text-black">
               Hi {hasPlusOne ? username.join(' & ') : username}!
             </Text>
             <Text className="text-[14px] leading-[24px] text-black">
-              Wij zijn super blij dat jullie erbij kunnen zijn op onze grote dag! Hieronder vinden jullie alle
-              informatie die jullie nodig hebben om er een onvergetelijke dag van te maken.
+              Wij zijn super blij dat jullie erbij kunnen zijn op onze grote dag! Voor het geval jullie dat nog niet
+              hadden gedaan, je vindt op de website meer informatie, bijvoorbeeld bij de{' '}
+              <Link href={`${process.env.VERCEL_URL}/faq`} className="text-blue-600 no-underline">
+                FAQs
+              </Link>
+              .
             </Text>
             <Text className="text-[14px] leading-[24px] text-black">
               Mochten jullie nog vragen hebben, neem gerust even contact op met ons of de{' '}
