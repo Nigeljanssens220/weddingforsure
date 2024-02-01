@@ -37,7 +37,10 @@ export const RSVPSuccess = ({ username }: RSVPSuccessProps) => {
             <Text className="text-[14px] leading-[24px] text-black">
               Wij zijn super blij dat jullie erbij kunnen zijn op onze grote dag! Voor het geval jullie dat nog niet
               hadden gedaan, je vindt op de website meer informatie, bijvoorbeeld bij de{' '}
-              <Link href={`${process.env.VERCEL_URL}/faq`} className="text-blue-600 no-underline">
+              <Link
+                href={`${process.env.VERCEL ? 'https://thenishiwedding.com' : 'http://localhost:3000'}/faq`}
+                className="text-blue-600 no-underline"
+              >
                 FAQs
               </Link>
               .
