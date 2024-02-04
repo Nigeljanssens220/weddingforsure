@@ -49,13 +49,16 @@ export default function RsvpForm() {
     const usernames = data.person.map((person) => person.name)
     const emails = data.person.map((person) => person.email)
 
-    const result = await sendEmail({ username: usernames, email: ['janssensnigel@gmail.com'] })
+    const result = await sendEmail({
+      username: usernames,
+      email: emails,
+    })
     if (result.error) {
-      toast.error('We konden je RSVP niet versturen. Probeer het nog eens!')
+      toast.error('We konden je RSVP niet versturen. Probeer het nog eens!', { position: 'top-right' })
     }
 
     if (result.success) {
-      toast.success('Je RSVP is verstuurd!')
+      toast.success('Je RSVP is verstuurd!', { position: 'top-right' })
     }
   }
 
@@ -66,27 +69,31 @@ export default function RsvpForm() {
         onSubmit={formMethods.handleSubmit(handleCreateRsvp)}
         className="flex w-full max-w-xl flex-col gap-8 bg-[#E6D2C4] bg-opacity-50 p-8"
       >
-        <Typography as="p" className="text-balance">
-          We cannot wait to celebrate our wedding day with you. But, we need to know if you have got the moves. Please
-          RSVP using the form below in order to make sure you will have a first row seat, delicious food and a spot on
-          the dancefloor!
+        <Typography as="p">
+          We kunnen niet wachten om onze bruiloft met jullie te vieren! Maar, we moeten wel weten of je de moves hebt.
+          Vul het formulier hieronder in om te laten weten of je komt, wat je eet en of je een plus one meeneemt. Dan
+          zorgen wij voor een plekje op de eerste rij, lekker eten en een plekje op de dansvloer!
         </Typography>
         {fields.map((field, index) => (
           <div key={field.id} className="flex flex-col gap-4">
             <Typography variant="lg/semibold" as="h3" className="-mb-2">
-              {index === 0 ? 'You' : 'Your plus one'}
+              {index === 0 ? 'Jij' : 'Je wederhelft'}
             </Typography>
             <FormTextField name={`person.${index}.name` as const} placeholder="Name" />
-            <FormTextField name={`person.${index}.email` as const} placeholder="rockyourworld@email.com" />
+            <FormTextField
+              name={`person.${index}.email` as const}
+              type="email"
+              placeholder="thenishiwedding@marryme.com"
+            />
             <FormTextArea
               name={`person.${index}.dietaryRestrictions` as const}
-              placeholder="Note any dietary restrictions here, e.g. I only eat snails."
+              placeholder="Geef hier aan of je allergieën hebt, of andere dieetwensen."
             />
             {index === 0 && (
               <div className="flex items-center gap-2">
                 <Switch id="plus-one" checked={fields.length > 1} onCheckedChange={handleAddOrRemovePlusOne} />
                 <Typography as="label" htmlFor="plus-one" variant="sm/regular">
-                  Plus one sexy person?
+                  Plus één knapperd?
                 </Typography>
               </div>
             )}
@@ -100,7 +107,7 @@ export default function RsvpForm() {
           />
         )}
         <Button type="submit" className="rounded-none" disabled={createRsvp.isLoading}>
-          {createRsvp.isLoading ? 'Submitting...' : 'Sign me up'}
+          {formMethods.formState.isSubmitting ? 'Laden...' : 'RSVP'}
         </Button>
       </form>
       {/* <DevTool control={formMethods.control} /> */}

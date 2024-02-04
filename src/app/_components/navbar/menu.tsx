@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import { MenuIcon, X } from 'lucide-react'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import nigelAndShintaG from '../../../../public/images/cocktail.svg'
 import Typography from '../ui/typography'
@@ -81,10 +82,11 @@ const footerAnimation = {
 
 export function Menu({ className }: { className?: string }) {
   const [open, setOpen] = useState(false)
+  const router = useRouter()
 
   return (
     <div className={cn('relative self-end', className)}>
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {open && (
           <motion.div
             variants={menuAnimation}
@@ -123,7 +125,15 @@ export function Menu({ className }: { className?: string }) {
                           variants={mobileLinkAnimation}
                           className="text-lg uppercase text-[#5D5C4E] sm:text-xl lg:text-2xl"
                         >
-                          <a href={href}>{label}</a>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setOpen(false)
+                              router.push(href)
+                            }}
+                          >
+                            {label}
+                          </button>
                         </motion.div>
                       </li>
                     ))}

@@ -1,26 +1,22 @@
 'use server'
 
 import { env } from '@/env.mjs'
+import RSVPSuccess from 'emails/rsvp-success'
 import { Resend } from 'resend'
 
 const resend = new Resend(env.RESEND_API_KEY)
 
 export const sendEmail = async ({ username, email }: { username: string[]; email: string[] }) => {
-  console.log('starting')
   try {
-    const { data, error } = await resend.emails.send({
-      from: 'info@thenishiwedding.com',
-      to: 'janssensnigel@gmail.com',
-      subject: 'Hello world',
-      // react: RSVPSuccess({ username }),
-      text: 'hellow orld',
+    const result = await resend.emails.send({
+      from: 'The Nishi Wedding <info@nigeljanssens.com>',
+      to: email,
+      subject: 'We hebben je RSVP ontvangen!',
+      react: RSVPSuccess({ username }),
     })
-
-    console.log('result', data)
-    console.log('result', error)
-
-    return { success: true, data, error }
+    return { success: true, data: result.data }
   } catch (error) {
-    return { success: false, error }
+    console.error('SEND RSVP SUCCESS FAILED YO MAMA', error)
+    return { success: false, error: 'fucker' }
   }
 }
