@@ -1,22 +1,16 @@
+'use client'
+
 import Typography from '@/app/_components/ui/typography'
 
+import { ParallaxHero } from '@/app/_components/parallax-hero'
 import Hero from '@/app/_components/ui/hero'
 import { ChevronDown } from 'lucide-react'
-import Image from 'next/image'
 
 export function HomeSection() {
   return (
     <div className="relative flex h-svh w-screen flex-col items-center">
-      <Image
-        fill
-        priority
-        loading="eager"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-        src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_1920,f_auto,q_auto/v1705758405/Michelle.Cole.Wedding-0248_gzyi2d.jpg"
-        alt="nigel-and-shinta-g"
-        className="absolute -z-20 object-cover object-top"
-      />
-      <div className="absolute top-0 -z-10 h-svh w-screen bg-black bg-opacity-40" />
+      <ParallaxHero />
+      {/* <div className="absolute top-0 -z-10 h-svh w-screen bg-black bg-opacity-40" /> */}
       <div className="container mt-20 flex h-full flex-col justify-center gap-8 text-center text-white md:mt-32 md:justify-center">
         <Hero variant="light" className="font-slight">
           Shinta

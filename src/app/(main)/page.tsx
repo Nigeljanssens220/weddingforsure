@@ -5,6 +5,7 @@ import { SleepSection } from '@/sections/sleep-section'
 import { ThemeSection } from '@/sections/theme-section'
 import { TimelineSection } from '@/sections/timeline-section'
 import { PageBreak } from '../_components/page-break'
+import { SmoothScroll } from '../_components/smooth-scroll-wrapper'
 
 export const dynamic = 'force-static'
 
@@ -12,16 +13,18 @@ export default function Home() {
   return (
     <>
       <main className="relative flex flex-col items-center justify-start overflow-x-hidden p-0">
-        <HomeSection />
-        <RSVPSection />
-        <PageBreak />
-        <TimelineSection />
-        <PageBreak />
-        <LocationSection />
-        <PageBreak />
-        <ThemeSection />
-        <PageBreak />
-        <SleepSection />
+        <SmoothScroll>
+          <HomeSection />
+          <RSVPSection />
+          <PageBreak />
+          <TimelineSection />
+          <PageBreak />
+          <LocationSection />
+          <PageBreak />
+          <ThemeSection />
+          <PageBreak />
+          <SleepSection />
+        </SmoothScroll>
       </main>
     </>
   )
