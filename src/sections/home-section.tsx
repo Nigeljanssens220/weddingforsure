@@ -4,7 +4,6 @@ import Typography from '@/app/_components/ui/typography'
 
 import { ParallaxHero } from '@/app/_components/parallax-hero'
 import Hero from '@/app/_components/ui/hero'
-import { ChevronDown } from 'lucide-react'
 
 export function HomeSection() {
   return (
@@ -25,10 +24,6 @@ export function HomeSection() {
           Nodigen je uit voor hun bruiloft!
         </Typography>
       </div>
-      <a href="#rsvp" className="sticky animate-bounce pb-4">
-        <span className="sr-only">scroll to rsvp</span>
-        <ChevronDown className="h-8 w-8 text-white" />
-      </a>
     </div>
   )
 }
