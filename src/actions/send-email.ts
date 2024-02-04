@@ -6,21 +6,21 @@ import { Resend } from 'resend'
 const resend = new Resend(env.RESEND_API_KEY)
 
 export const sendEmail = async ({ username, email }: { username: string[]; email: string[] }) => {
-  console.log('ACTION STARING MF')
+  console.log('starting')
   try {
-    const result = await resend.emails.send({
-      from: 'onboarding@resend.dev"',
+    const { data, error } = await resend.emails.send({
+      from: 'info@thenishiwedding.com',
       to: 'janssensnigel@gmail.com',
       subject: 'Hello world',
       // react: RSVPSuccess({ username }),
       text: 'hellow orld',
     })
-    console.log('RESULT', result)
 
-    console.log('WE HAVE AN ERROR FUCK', result.error)
-    return { success: true }
+    console.log('result', data)
+    console.log('result', error)
+
+    return { success: true, data, error }
   } catch (error) {
-    console.error('ACTION FAILED YO MAMA', error)
-    return { success: false, error: 'fucker' }
+    return { success: false, error }
   }
 }

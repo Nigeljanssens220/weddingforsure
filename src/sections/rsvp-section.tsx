@@ -1,6 +1,7 @@
 import Typography from '@/app/_components/ui/typography'
 import Image from 'next/image'
 import Link from 'next/link'
+// import Celebrations from '../../public/celebration.lottie'
 
 export function RSVPSection() {
   return (
