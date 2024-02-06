@@ -2,6 +2,8 @@ import { LottiePlayer } from '@/app/_components/lottie-player'
 import Typography from '@/app/_components/ui/typography'
 import Link from 'next/link'
 
+export const dynamic = 'force-static'
+
 export default function ThankYouPage() {
   return (
     <div className="relative flex h-screen flex-col items-center justify-center">
