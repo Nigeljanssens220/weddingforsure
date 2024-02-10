@@ -17,7 +17,7 @@ const RegularMenu = () => {
           Geserveerd met brood, gezouten roomboter en extra vierge olijfolie
         </Typography>
         <Typography as="li">Parelhoen | veenbes | polenta | bospeen | courgette | meloesui</Typography>
-        <Typography as="li">Tartelette | vanille | bosvruchten | crème Suisse | pistache | aardbeienparfait</Typography>
+        <Typography as="li">Tartelette | vanille | bosvruchten | creme Suisse | pistache | aardbeienparfait</Typography>
       </ul>
     </div>
   )
@@ -36,7 +36,7 @@ const VeggieMenu = () => {
           Geserveerd met brood, gezouten roomboter en extra vierge olijfolie
         </Typography>
         <Typography as="li">Knolselderij | truffel | bospeen | courgette | beurre blanc</Typography>
-        <Typography as="li">Tartelette | vanille | bosvruchten | crème Suisse | pistache | aardbeienparfait</Typography>
+        <Typography as="li">Tartelette | vanille | bosvruchten | creme Suisse | pistache | aardbeienparfait</Typography>
       </ul>
     </div>
   )
