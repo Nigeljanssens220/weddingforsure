@@ -9,7 +9,7 @@ type Props = {
   delay?: number
 }
 
-export default function ScrollReveal({ children, delay, className }: Props) {
+export default function OpacityReveal({ children, delay, className }: Props) {
   const ref = useRef(null)
   const isInview = useInView(ref, { once: true })
   const controls = useAnimation()
@@ -25,12 +25,12 @@ export default function ScrollReveal({ children, delay, className }: Props) {
     <motion.div
       ref={ref}
       variants={{
-        hidden: { opacity: 0, translateY: 20 },
-        visible: { opacity: 1, translateY: 0 },
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
       }}
       transition={{
         type: 'tween',
-        duration: 0.5,
+        duration: 0.75,
         delay: delay ? delay : 0.2,
       }}
       initial="hidden"

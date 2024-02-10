@@ -33,11 +33,7 @@ export interface LargeHeadingProps extends React.HTMLProps<HTMLHeadingElement> {
 const Hero = forwardRef<HTMLHeadingElement, LargeHeadingProps>(
   ({ variant, className = '', children, ...rest }: LargeHeadingProps, ref) => {
     return (
-      <h1
-        {...rest}
-        ref={ref}
-        className={cn(className, largeHeadingStyles({ variant }), 'text-7xl text-black sm:text-8xl')}
-      >
+      <h1 {...rest} ref={ref} className={cn(className, largeHeadingStyles({ variant }), 'text-7xl sm:text-8xl')}>
         {children}
       </h1>
     )
