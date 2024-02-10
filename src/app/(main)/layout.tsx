@@ -4,7 +4,7 @@ export default function PageLayout({ children, modal }: { children: React.ReactN
   return (
     <>
       <Navbar />
-      <main className="min-h-dvh">
+      <main>
         {children}
         {modal}
       </main>

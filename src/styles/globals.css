@@ -57,7 +57,7 @@
     @apply antialiased;
   }
   body {
-    @apply bg-beige text-foreground;
+    @apply bg-beige min-h-dvh text-foreground;
   }
 }
 
@@ -71,8 +71,16 @@
     @apply text-balance;
   }
 
-  p {
-    @apply max-w-[62ch] text-pretty;
+  p,
+  li {
+    @apply max-w-[65ch] text-pretty;
+  }
+
+  img,
+  picture,
+  svg,
+  video {
+    @apply block max-w-full;
   }
 }
 
