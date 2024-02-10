@@ -1,3 +1,4 @@
+import { ChefsMenuContent } from '@/app/_components/chefs-menu'
 import { SmoothScroll } from '@/app/_components/smooth-scroll-wrapper'
 import { Separator } from '@/app/_components/ui/separator'
 import Typography from '@/app/_components/ui/typography'
@@ -229,8 +230,13 @@ const FAQ = () => {
                 Wat voor eten wordt er geserveerd tijdens het diner?
               </Typography>
               <Typography as="p">
-                Het diner zal bestaan uit een 3 of 4-gangen menu. De menu opties zijn momenteel echter nog niet bekend.
+                Het diner zal bestaan uit een 3 of 4-gangen menu. Op dit moment hebben wij alleen de gerechten van het
+                3-gangen diner. Zie hieronder het reguliere en vegetarische menu:
               </Typography>
+              <div className="flex flex-col gap-4 py-8">
+                <ChefsMenuContent menu="Regulier" />
+                <ChefsMenuContent menu="Veggie" />
+              </div>
             </div>
             <div className="space-y-1">
               <Typography className="text-xl font-semibold text-black" as="h3">
