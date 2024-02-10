@@ -26,14 +26,15 @@ export default function Navbar() {
         hidden: { y: '-100%' },
       }}
       animate={hidden ? 'hidden' : 'visible'}
-      className="fixed top-0 z-10 flex w-screen justify-end px-2 py-6 md:justify-start"
+      transition={{ type: 'tween' }}
+      className="fixed top-0 z-10 flex w-screen justify-end px-10 py-6 md:justify-start"
     >
       <nav className="hidden md:block">
         <ul className="flex items-center gap-4">
           {routes.map(({ href, label }) => (
             <li key={label}>
               <Link href={href}>
-                <Typography as="span" className="p-2">
+                <Typography as="span" className="p-2 tracking-wider">
                   {label}
                 </Typography>
               </Link>

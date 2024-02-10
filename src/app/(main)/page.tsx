@@ -1,3 +1,4 @@
+import { CMSection } from '@/sections/cm-section'
 import { HomeSection } from '@/sections/home-section'
 import { LocationSection } from '@/sections/location-section'
 import { RSVPSection } from '@/sections/rsvp-section'
@@ -24,6 +25,7 @@ export default function Home() {
           <ThemeSection />
           <PageBreak />
           <SleepSection />
+          <CMSection />
         </SmoothScroll>
       </main>
     </>
