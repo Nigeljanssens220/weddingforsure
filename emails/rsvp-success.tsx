@@ -26,7 +26,7 @@ export const RSVPSuccess = ({ username }: RSVPSuccessProps) => {
           <Container className="mx-auto my-[40px]  max-w-[465px] rounded border border-solid border-black p-[20px]">
             <Section className="mx-auto my-8 w-full">
               <Img
-                src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_200,f_auto,q_100/v1706796977/wedding/rfun3wmzhdpfta2vw2hw.png"
+                src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_200,f_auto,q_100/v1706796977/wedding/hm3nn14zgd3em9bzujgl.png"
                 className="mx-auto"
               />
             </Section>

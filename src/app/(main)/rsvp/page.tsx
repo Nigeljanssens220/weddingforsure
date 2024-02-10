@@ -7,7 +7,7 @@ export const dynamic = 'force-static'
 
 const RSVP = () => {
   return (
-    <div className="mt-10 flex min-h-dvh w-full flex-col items-center px-3 selection:bg-black selection:text-[#C78686] md:mt-32">
+    <div className="mt-10 flex min-h-dvh w-full flex-col items-center px-8 selection:bg-black selection:text-[#C78686] md:mt-32">
       <div className="grid gap-4 md:grid-cols-2">
         <div className="flex flex-col items-center gap-4 text-center md:items-start md:pt-36">
           {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
