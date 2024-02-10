@@ -13,7 +13,7 @@ export const PopoverChefsMenu = ({ menu }: { menu?: 'Regulier' | 'Veggie' }) => 
           <span className="sr-only">open chefs menu</span>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-80">
+      <PopoverContent className="w-72">
         <ChefsMenuContent menu={menu} />
       </PopoverContent>
     </Popover>
