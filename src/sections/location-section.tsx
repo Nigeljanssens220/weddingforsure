@@ -26,13 +26,17 @@ export function LocationSection() {
             href="https://swijnenburg.com/locatie/buitenplaats-sparrendaal/"
             className="flex items-center"
           >
-            <Typography as="span" className="font-semibold">
+            <Typography as="span" variant="lg/semibold" className="font-eaves">
               Buitenplaats Sparrendaal
             </Typography>
             <ExternalLink className="ml-2 size-4 text-foreground" />
           </a>
-          <Typography as="p">Hoofdstraat 89</Typography>
-          <Typography as="p">3971 KE, Driebergen-Rijsenburg</Typography>
+          <Typography as="p" className="font-eaves">
+            Hoofdstraat 89
+          </Typography>
+          <Typography as="p" className="font-eaves">
+            3971 KE, Driebergen-Rijsenburg
+          </Typography>
         </div>
       </ScrollReveal>
       <ScrollReveal delay={0.35}>

@@ -105,7 +105,7 @@ export function Menu({ className }: { className?: string }) {
                   <Image
                     src="https://res.cloudinary.com/dmdewqwqf/image/upload/f_auto,q_auto/v1707564556/wedding/hm3nn14zgd3em9bzujgl.png"
                     alt="s-n-logo"
-                    width={250}
+                    width={200}
                     height={100}
                     className="object-cover"
                   />
