@@ -1,6 +1,5 @@
 import Typography from '@/app/_components/ui/typography'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export function ThemeSection() {
   return (
@@ -24,16 +23,14 @@ export function ThemeSection() {
         <div className="h-8 w-8 rounded-full bg-[#E8C37B]" />
         <div className="h-8 w-8 rounded-full bg-[#EAB4C1]" />
       </div>
-
-      <Link href={'/photos/vzxnlqpwnwymdxgwynad'}>
-        <Image
-          src="https://res.cloudinary.com/dmdewqwqf/image/upload/f_auto,q_auto,w_auto/v1707564556/wedding/vzxnlqpwnwymdxgwynad.png"
-          alt="Wedding theme women"
-          width={400}
-          height={100}
-          className="object-cover"
-        />
-      </Link>
+      <Image
+        quality={100}
+        src="https://res.cloudinary.com/dmdewqwqf/image/upload/f_auto,q_auto,w_auto/v1707564556/wedding/iadxuonoewqbdnyhmpbm.jpg"
+        alt="Wedding theme women"
+        width={400}
+        height={100}
+        className="object-cover"
+      />
     </div>
   )
 }
