@@ -167,7 +167,7 @@ export function Menu({ className }: { className?: string }) {
         )}
       </AnimatePresence>
       <button type="button" className="px-4 py-2" onClick={() => setOpen(true)}>
-        <MenuIcon className="h-6 w-6 text-foreground" />
+        <MenuIcon className="size-6 text-[#464646]" />
       </button>
     </div>
   )
