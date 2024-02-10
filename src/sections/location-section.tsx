@@ -1,28 +1,42 @@
 import Typography from '@/app/_components/ui/typography'
+import { ExternalLink } from 'lucide-react'
 import Image from 'next/image'
 
 export function LocationSection() {
   return (
-    <div id="location" className="flex w-screen max-w-screen-md flex-col items-center gap-10 px-10 py-10 text-center ">
-      <Typography as="h3" className="text-3xl font-semibold">
-        Locatie
-      </Typography>
-      <Typography as="p">
-        Op Buitenplaats Sparrendaal vieren wij de liefde te midden van historische pracht en betoverende tuinen. Een
-        romantische setting waar we met onze favoriete mensen onvergetelijke herinneringen gaan maken.
-      </Typography>
-      <div>
-        <Typography as="p" className="italic">
-          Buitenplaats Sparrendaal
+    <div
+      id="location"
+      className="flex w-screen max-w-screen-md flex-col items-center gap-12 px-10 py-[120px] text-center "
+    >
+      <div className="space-y-4">
+        <Typography as="h3" className="text-3xl font-semibold">
+          Locatie
         </Typography>
-        <Typography as="p" className="italic">
-          Hoofdstraat 89
-        </Typography>
-        <Typography as="p" className="italic">
-          3971 KE &nbsp;&nbsp;Driebergen-Rijsenburg
+        <Typography as="p">
+          Op Buitenplaats Sparrendaal vieren wij de liefde te midden van historische pracht en betoverende tuinen. Een
+          romantische setting waar we met onze favoriete mensen onvergetelijke herinneringen gaan maken.
         </Typography>
       </div>
-      <Image src="/images/sparrendaal.svg" alt="Buitenplaats Sparrendaal" width={282} height={162} />
+      <div className="flex flex-col items-center">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://swijnenburg.com/locatie/buitenplaats-sparrendaal/"
+          className="flex items-center"
+        >
+          <span className="font-semibold">Buitenplaats Sparrendaal</span>
+          <ExternalLink className="ml-2 size-4 text-foreground" />
+        </a>
+        <Typography as="p">Hoofdstraat 89</Typography>
+        <Typography as="p">3971 KE, Driebergen-Rijsenburg</Typography>
+      </div>
+      <Image
+        src="https://res.cloudinary.com/dmdewqwqf/image/upload/f_auto,w_auto,q_auto/v1707575465/wedding/bhjqd1c3ehxxxh6ydyez.png"
+        alt="Buitenplaats Sparrendaal"
+        width={300}
+        height={200}
+        className="object-cover"
+      />
     </div>
   )
 }

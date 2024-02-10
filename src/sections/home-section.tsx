@@ -2,9 +2,9 @@
 
 import Typography from '@/app/_components/ui/typography'
 
-import { ParallaxHero } from '@/app/_components/parallax-hero'
 import Hero from '@/app/_components/ui/hero'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import Image from 'next/image'
 
 export function HomeSection() {
   const { scrollYProgress } = useScroll()
@@ -12,8 +12,15 @@ export function HomeSection() {
 
   return (
     <div className="relative flex h-svh w-screen flex-col items-center">
-      <ParallaxHero />
-      {/* <div className="absolute top-0 -z-10 h-svh w-screen bg-black bg-opacity-40" /> */}
+      <Image
+        fill
+        quality={100}
+        priority
+        loading="eager"
+        src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_1920,f_auto,q_100/v1707551624/wedding/nzvklbrwxbtxaes4vwlg.jpg"
+        alt="nigel-and-shinta-g"
+        className="absolute -z-20 max-h-svh w-screen object-cover object-bottom"
+      />
       <motion.div style={{ y }} className="flex flex-col items-center gap-10 pt-[152px] text-center lg:pt-16">
         <div>
           <Typography as="p" variant="md/regular" className="uppercase text-black">
