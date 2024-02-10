@@ -40,18 +40,13 @@ model Rsvp {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  nameA String
-  nameB String? 
-
-  emailA String @unique
-  emailB String? @unique
-
-  dietaryRestrictionsA String?
-  dietaryRestrictionsB String?
+  name String
+  email String @unique
+  dietaryRestrictions String?
+  menuOptions String
 
   rsvpOptions String
   rsvpOptionsOther String?
 
   @@index([id])
-  @@index([emailA])
 }

@@ -1,7 +1,7 @@
 'use client'
 
 import { sendEmail } from '@/actions/send-email'
-import { rsvpOptions } from '@/lib/rsvp'
+import { menuOptions, rsvpOptions } from '@/lib/rsvp'
 import { schemaCreateRSVP, type SchemaCreateRSVP } from '@/schemas/rsvp'
 import { api } from '@/trpc/react'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
@@ -11,10 +11,12 @@ import { toast } from 'sonner'
 import { FormRadioGroup } from './form/radio-group'
 import { FormTextArea } from './form/text-area'
 import { FormTextField } from './form/text-field'
+import { Alert, AlertTitle } from './ui/alert'
 import { Button } from './ui/button'
 import { Form } from './ui/form'
 import { Switch } from './ui/switch'
 import Typography from './ui/typography'
+
 export default function RsvpForm() {
   const [parent] = useAutoAnimate<HTMLFormElement>()
   const createRsvp = api.rsvp.create.useMutation()
@@ -28,9 +30,11 @@ export default function RsvpForm() {
           name: '',
           email: '',
           dietaryRestrictions: '',
+          menuOptions: 'Regulier',
         },
       ],
       rsvpOptions: rsvpOptions.at(0),
+      // rsvpOptions: 'Anders',
     },
   })
 
@@ -40,19 +44,34 @@ export default function RsvpForm() {
   })
 
   const handleAddOrRemovePlusOne = () => {
-    fields.length > 1 ? remove(-1) : append({ name: '', email: '', dietaryRestrictions: '' })
+    fields.length > 1 ? remove(-1) : append({ name: '', email: '', dietaryRestrictions: '', menuOptions: 'Regulier' })
   }
 
   const handleCreateRsvp = async (data: SchemaCreateRSVP) => {
-    // createRsvp.mutate(data)
-
     const usernames = data.person.map((person) => person.name)
     const emails = data.person.map((person) => person.email)
+
+    // create RSVPs in database
+    const transformedData = data.person.map((person) => {
+      return {
+        ...person,
+        rsvpOptions: data.rsvpOptions,
+        rsvpOptionsOther: data.rsvpOptionsOther,
+      }
+    })
+
+    await Promise.all([
+      // biome-ignore lint/style/noNonNullAssertion: <explanation>
+      await createRsvp.mutateAsync(transformedData[0]!),
+      // biome-ignore lint/style/noNonNullAssertion: <explanation>
+      !!transformedData.at(1) && (await createRsvp.mutateAsync(transformedData.at(1)!)),
+    ])
 
     const result = await sendEmail({
       username: usernames,
       email: emails,
     })
+
     if (result.error) {
       toast.error('We konden je RSVP niet versturen. Probeer het nog eens!', { position: 'top-right' })
     }
@@ -67,16 +86,19 @@ export default function RsvpForm() {
       <form
         ref={parent}
         onSubmit={formMethods.handleSubmit(handleCreateRsvp)}
-        className="flex w-full max-w-xl flex-col gap-8 bg-[#E6D2C4] bg-opacity-50 p-8"
+        className="mb-6 flex w-full max-w-xl flex-col gap-8 bg-[#F8F5EF] p-8"
       >
+        <Alert className="flex items-center justify-center">
+          <AlertTitle>Reageer voor 1 juni 2024!</AlertTitle>
+        </Alert>
         <Typography as="p">
           We kunnen niet wachten om onze bruiloft met jullie te vieren! Maar, we moeten wel weten of je de moves hebt.
           Vul het formulier hieronder in om te laten weten of je komt, wat je eet en of je een plus one meeneemt. Dan
           zorgen wij voor een plekje op de eerste rij, lekker eten en een plekje op de dansvloer!
         </Typography>
         {fields.map((field, index) => (
-          <div key={field.id} className="flex flex-col gap-4">
-            <Typography variant="lg/semibold" as="h3" className="-mb-2">
+          <div key={field.id} className="flex flex-col gap-6">
+            <Typography variant="xl/semibold" as="h3" className="-mb-2">
               {index === 0 ? 'Jij' : 'Je wederhelft'}
             </Typography>
             <FormTextField name={`person.${index}.name` as const} placeholder="Name" />
@@ -85,32 +107,46 @@ export default function RsvpForm() {
               type="email"
               placeholder="thenishiwedding@marryme.com"
             />
+            <FormRadioGroup
+              name={`person.${index}.menuOptions`}
+              label="Diner voorkeuren"
+              items={menuOptions as unknown as string[]}
+            />
             <FormTextArea
               name={`person.${index}.dietaryRestrictions` as const}
+              label="Overige opmerkingen diner"
               placeholder="Geef hier aan of je allergieën hebt, of andere dieetwensen."
             />
             {index === 0 && (
               <div className="flex items-center gap-2">
                 <Switch id="plus-one" checked={fields.length > 1} onCheckedChange={handleAddOrRemovePlusOne} />
-                <Typography as="label" htmlFor="plus-one" variant="sm/regular">
+                <Typography as="label" htmlFor="plus-one" variant="md/regular">
                   Plus een knapperd?
                 </Typography>
               </div>
             )}
           </div>
         ))}
-        <FormRadioGroup name="rsvpOptions" label="Options" items={rsvpOptions as unknown as string[]} />
-        {formMethods.watch('rsvpOptions') === rsvpOptions.at(-1) && (
+        <FormRadioGroup
+          name="rsvpOptions"
+          label="Selecteer een RSVP optie!"
+          items={rsvpOptions as unknown as string[]}
+        />
+
+        {formMethods.watch('rsvpOptions') === 'Anders' && (
           <FormTextArea
             name="rsvpOptionsOther"
             placeholder="Vul hier maar gewoon in waarom je zo moeilijk doet en op welke delen je wel/niet komt."
           />
         )}
-        <Button type="submit" className="rounded-none" disabled={createRsvp.isLoading}>
+        <Button
+          type="submit"
+          className="w-fit max-w-sm self-end rounded-full px-8"
+          disabled={formMethods.formState.isSubmitting}
+        >
           {formMethods.formState.isSubmitting ? 'Laden...' : 'RSVP'}
         </Button>
       </form>
-      {/* <DevTool control={formMethods.control} /> */}
     </Form>
   )
 }

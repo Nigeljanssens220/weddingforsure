@@ -11,7 +11,6 @@ import {
 } from 'react-hook-form'
 
 import { cn } from '@/lib/utils'
-import { Label } from 'src/app/_components/ui/label'
 import Typography from './typography'
 
 const Form = FormProvider
@@ -82,11 +81,23 @@ FormItem.displayName = 'FormItem'
 
 const FormLabel = React.forwardRef<
   React.ElementRef<typeof LabelPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
->(({ className, ...props }, ref) => {
+  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & { variant?: string }
+>(({ className, children, variant, ...props }, ref) => {
   const { error, formItemId } = useFormField()
 
-  return <Label ref={ref} className={cn(error && 'text-destructive', className)} htmlFor={formItemId} {...props} />
+  return (
+    <Typography
+      as="label"
+      ref={ref}
+      // @ts-expect-error - lazy
+      variant={variant ?? 'md/semibold'}
+      className={cn(error && 'text-destructive', 'font-eaves', className)}
+      htmlFor={formItemId}
+      {...props}
+    >
+      {children}
+    </Typography>
+  )
 })
 FormLabel.displayName = 'FormLabel'
 

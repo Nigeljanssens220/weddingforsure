@@ -48,7 +48,7 @@ export function FormTextArea({ label, name, description, ...rest }: FormTextArea
             <Textarea
               {...rest}
               {...field}
-              className="order-1 peer-[]/error:border-red-600 peer-[]/error:text-red-600"
+              className="order-1 text-lg peer-[]/error:border-red-600 peer-[]/error:text-red-600"
             />
           </FormControl>
         </FormItem>

@@ -45,7 +45,11 @@ export function FormTextField({ label, name, description, ...rest }: FormTextFie
             )}
           />
           <FormControl>
-            <Input {...rest} {...field} className="order-1 peer-[]/error:border-red-600 peer-[]/error:text-red-600" />
+            <Input
+              {...rest}
+              {...field}
+              className="order-1 text-lg peer-[]/error:border-red-600 peer-[]/error:text-red-600"
+            />
           </FormControl>
         </FormItem>
       )}
