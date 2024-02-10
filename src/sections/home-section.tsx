@@ -8,7 +8,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 
 export function HomeSection() {
   const { scrollYProgress } = useScroll()
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '200%'])
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '300%'])
 
   return (
     <div className="relative flex h-svh w-screen flex-col items-center">
