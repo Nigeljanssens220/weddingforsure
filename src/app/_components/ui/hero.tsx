@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils'
 import { cva, type VariantProps } from 'class-variance-authority'
 import React, { forwardRef } from 'react'
 
-export const largeHeadingStyles = cva('text-5xl md:text-7xl', {
+export const largeHeadingStyles = cva('', {
   variants: {
     variant: {
       heavy: 'font-bold',
@@ -33,7 +33,11 @@ export interface LargeHeadingProps extends React.HTMLProps<HTMLHeadingElement> {
 const Hero = forwardRef<HTMLHeadingElement, LargeHeadingProps>(
   ({ variant, className = '', children, ...rest }: LargeHeadingProps, ref) => {
     return (
-      <h1 {...rest} ref={ref} className={cn(className, largeHeadingStyles({ variant }), 'text-8xl text-[#464646]')}>
+      <h1
+        {...rest}
+        ref={ref}
+        className={cn(className, largeHeadingStyles({ variant }), 'text-7xl text-[#464646] sm:text-8xl')}
+      >
         {children}
       </h1>
     )

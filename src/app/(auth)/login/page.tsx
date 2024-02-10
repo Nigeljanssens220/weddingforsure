@@ -22,11 +22,11 @@ export default function Login() {
         <Typography as="p" variant="md/regular" className="max-w-[20ch] uppercase text-[#464646]">
           Je bent uitgenodigd voor de bruiloft van
         </Typography>
-        <div className="flex flex-col gap-4 text-start">
+        <div className="flex flex-col  gap-2 text-start">
           <Hero variant="light" className="font-sloop -ml-4">
             Shinta
           </Hero>
-          <Typography variant="xl/regular" className="self-center uppercase text-[#464646]">
+          <Typography variant="xl/regular" className="-mt-2 self-center uppercase text-[#464646]">
             EN
           </Typography>
           <Hero variant="light" className="font-sloop -ml-4">

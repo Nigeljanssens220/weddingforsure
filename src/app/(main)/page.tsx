@@ -12,7 +12,7 @@ export const dynamic = 'force-static'
 export default function Home() {
   return (
     <>
-      <main className="relative flex flex-col items-center justify-start overflow-x-hidden p-0">
+      <main className="no-scrollbar relative flex flex-col items-center justify-start overflow-hidden p-0 selection:bg-black selection:text-beige">
         <SmoothScroll>
           <HomeSection />
           <RSVPSection />
