@@ -36,7 +36,7 @@ const Hero = forwardRef<HTMLHeadingElement, LargeHeadingProps>(
       <h1
         {...rest}
         ref={ref}
-        className={cn(className, largeHeadingStyles({ variant }), 'text-7xl text-[#464646] sm:text-8xl')}
+        className={cn(className, largeHeadingStyles({ variant }), 'text-7xl text-black sm:text-8xl')}
       >
         {children}
       </h1>
