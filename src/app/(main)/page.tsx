@@ -7,6 +7,7 @@ import { ThemeSection } from '@/sections/theme-section'
 import { TimelineSection } from '@/sections/timeline-section'
 import Image from 'next/image'
 import { SmoothScroll } from '../_components/smooth-scroll-wrapper'
+import Typography from '../_components/ui/typography'
 
 export const dynamic = 'force-static'
 
@@ -153,6 +154,19 @@ export default function Home() {
           </div>
           <CMSection />
         </SmoothScroll>
+        <div className="flex h-40 w-screen items-center justify-center bg-[#ABB58E]">
+          <Typography as="h3" variant="xl/regular" className="font-sloop text-7xl text-beige">
+            See you there!
+          </Typography>
+        </div>
+        <footer className="flex w-screen items-center justify-between bg-[#F9F6F0] px-20 py-4">
+          <Typography as="p" variant="lg/regular" className="font-eaves">
+            Buitenplaats Sparrendaal
+          </Typography>
+          <Typography as="p" variant="lg/regular" className="font-eaves">
+            07.08.2024
+          </Typography>
+        </footer>
       </main>
     </>
   )
