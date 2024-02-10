@@ -9,9 +9,9 @@ const RSVP = () => {
   return (
     <div className="mt-10 flex min-h-dvh w-full flex-col items-center px-8 selection:bg-black selection:text-[#C78686] md:mt-32">
       <div className="grid gap-4 md:grid-cols-2">
-        <div className="flex flex-col items-center gap-4 text-center md:items-start md:pt-36">
+        <div className="flex flex-col items-center gap-4 text-center md:items-start md:pt-36 md:text-start">
           {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
-          <Image src={flowers} alt={'flowers'} className="object-cover" />
+          <Image src={flowers} alt={'flowers'} className="-mr-6 object-cover" />
           <Typography className="-mt-10 max-w-lg text-balance text-4xl md:text-7xl" as="h1">
             Come dance with us, baby!
           </Typography>
