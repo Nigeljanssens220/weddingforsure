@@ -5,7 +5,7 @@ import { RSVPSection } from '@/sections/rsvp-section'
 import { SleepSection } from '@/sections/sleep-section'
 import { ThemeSection } from '@/sections/theme-section'
 import { TimelineSection } from '@/sections/timeline-section'
-import { PageBreak } from '../_components/page-break'
+import Image from 'next/image'
 import { SmoothScroll } from '../_components/smooth-scroll-wrapper'
 
 export const dynamic = 'force-static'
@@ -17,14 +17,140 @@ export default function Home() {
         <SmoothScroll>
           <HomeSection />
           <RSVPSection />
-          <PageBreak />
+          <div className="flex h-full max-h-40 w-full px-0 md:max-h-96">
+            <Image
+              quality={100}
+              width={640}
+              height={130}
+              src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_100/v1707551624/wedding/xa8lqif4hmqhqzmzsfkd.jpg"
+              alt="staring-lovely-couple"
+              className="w-1/3 object-cover object-bottom "
+            />
+            <Image
+              quality={100}
+              width={640}
+              height={130}
+              src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_100/v1707551624/wedding/qz3t7hdi1s8hrl5oh2zy.jpg"
+              alt="smooth-couple"
+              className="w-1/3 object-cover object-top"
+            />
+            <Image
+              quality={100}
+              width={640}
+              height={130}
+              src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_100/v1707551624/wedding/wclpxo5wpdhpfcymijj7.jpg"
+              alt="cool-couple"
+              className="w-1/3 object-cover object-bottom"
+            />
+          </div>
           <TimelineSection />
-          <PageBreak />
+          <div className="flex h-full max-h-40 w-full px-0 md:max-h-96">
+            <Image
+              quality={100}
+              width={640}
+              height={130}
+              src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_100/v1707551624/wedding/gex5ihply3dfcjkeca8d.jpg"
+              alt="staring-lovely-couple"
+              className="w-1/3 object-cover object-bottom "
+            />
+            <Image
+              quality={100}
+              width={640}
+              height={130}
+              src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_100/v1707551624/wedding/mt2vyu2hby6iqbragwyo.jpg"
+              alt="smooth-couple"
+              className="w-1/3 object-cover object-top"
+            />
+            <Image
+              quality={100}
+              width={640}
+              height={130}
+              src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_100/v1707551624/wedding/npoiv6eshi3oehkfybr1.jpg"
+              alt="cool-couple"
+              className="w-1/3 object-cover object-bottom"
+            />
+          </div>
           <LocationSection />
-          <PageBreak />
+          <div className="flex h-full max-h-40 w-full px-0 md:max-h-96">
+            <Image
+              quality={100}
+              width={640}
+              height={130}
+              src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_100/v1707551624/wedding/qzukpaleufnvwdx1gsx4.jpg"
+              alt="staring-lovely-couple"
+              className="w-1/3 object-cover object-top"
+            />
+            <Image
+              quality={100}
+              width={640}
+              height={130}
+              src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_100/v1707551624/wedding/c4bhjvoihgju5gvrngn6.jpg"
+              alt="smooth-couple"
+              className="w-1/3 object-cover object-top"
+            />
+            <Image
+              quality={100}
+              width={640}
+              height={130}
+              src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_100/v1707551624/wedding/f4owadaewvqkt2cq74lu.jpg"
+              alt="cool-couple"
+              className="w-1/3 object-cover object-top"
+            />
+          </div>
           <ThemeSection />
-          <PageBreak />
+          <div className="flex h-full max-h-40 w-full px-0 md:max-h-96">
+            <Image
+              quality={100}
+              width={640}
+              height={130}
+              src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_100/v1707551624/wedding/qrbk4cg2c1ahkvbgdgef.jpg"
+              alt="staring-lovely-couple"
+              className="w-1/3 object-cover object-top"
+            />
+            <Image
+              quality={100}
+              width={640}
+              height={130}
+              src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_100/v1707551624/wedding/lg7cmtakgwjxwapyrskj.jpg"
+              alt="smooth-couple"
+              className="w-1/3 object-cover object-top"
+            />
+            <Image
+              quality={100}
+              width={640}
+              height={130}
+              src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_100/v1707551624/wedding/ygzgvxjde3d5cokw4np2.jpg"
+              alt="cool-couple"
+              className="w-1/3 object-cover object-top"
+            />
+          </div>
           <SleepSection />
+          <div className="flex h-full max-h-40 w-full px-0 md:max-h-96">
+            <Image
+              quality={100}
+              width={640}
+              height={130}
+              src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_100/v1707551624/wedding/cvh801gfzqaralet6lmq.jpg"
+              alt="staring-lovely-couple"
+              className="w-1/3 object-cover"
+            />
+            <Image
+              quality={100}
+              width={640}
+              height={130}
+              src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_100/v1707551624/wedding/lwypbvlykd1jnjpjzdww.jpg"
+              alt="smooth-couple"
+              className="w-1/3 object-cover object-top"
+            />
+            <Image
+              quality={100}
+              width={640}
+              height={130}
+              src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_100/v1707551624/wedding/ngl4srcrbfzhwfwn2jlq.jpg"
+              alt="cool-couple"
+              className="w-1/3 object-cover object-bottom"
+            />
+          </div>
           <CMSection />
         </SmoothScroll>
       </main>
