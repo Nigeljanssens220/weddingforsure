@@ -6,6 +6,7 @@ import { schemaCreateRSVP, type SchemaCreateRSVP } from '@/schemas/rsvp'
 import { api } from '@/trpc/react'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useRouter } from 'next/navigation'
 import { useFieldArray, useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 import { FormRadioGroup } from './form/radio-group'
@@ -18,6 +19,7 @@ import { Switch } from './ui/switch'
 import Typography from './ui/typography'
 
 export default function RsvpForm() {
+  const router = useRouter()
   const [parent] = useAutoAnimate<HTMLFormElement>()
   const createRsvp = api.rsvp.create.useMutation()
 
@@ -76,9 +78,7 @@ export default function RsvpForm() {
       toast.error('We konden je RSVP niet versturen. Probeer het nog eens!', { position: 'top-right' })
     }
 
-    if (result.success) {
-      toast.success('Je RSVP is verstuurd!', { position: 'top-right' })
-    }
+    router.push('/thank-you')
   }
 
   return (
