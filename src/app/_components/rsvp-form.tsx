@@ -100,7 +100,7 @@ export default function RsvpForm() {
           </div>
         ))}
         <FormRadioGroup name="rsvpOptions" label="Options" items={rsvpOptions as unknown as string[]} />
-        {formMethods.getValues('rsvpOptions') === rsvpOptions.at(-1) && (
+        {formMethods.watch('rsvpOptions') === rsvpOptions.at(-1) && (
           <FormTextArea
             name="rsvpOptionsOther"
             placeholder="Vul hier maar gewoon in waarom je zo moeilijk doet en op welke delen je wel/niet komt."

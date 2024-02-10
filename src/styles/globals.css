@@ -57,7 +57,7 @@
     @apply antialiased;
   }
   body {
-    @apply bg-[#FFFDF9] text-foreground;
+    @apply bg-beige text-foreground;
   }
 }
 

@@ -7,24 +7,31 @@ export const dynamic = 'force-static'
 
 export default function Login() {
   return (
-    <main className="relative flex h-svh flex-col items-center justify-center overflow-x-hidden p-0">
+    <main className="selection:text-beige relative flex h-dvh flex-col items-center justify-start overflow-x-hidden p-0 selection:bg-black">
       <Image
         fill
         priority
         loading="eager"
         quality={100}
-        src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_1920,f_auto,q_100/v1705758405/Michelle.Cole.Wedding-0248_gzyi2d.jpg"
-        alt="nigel-and-shinta-g"
-        className="absolute -z-20 object-cover object-top"
+        src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_1920,f_auto,q_100/v1707551624/wedding/pmvcmrvzxknaypvjvl7y.jpg"
+        alt="nigel-and-shinta"
+        className="absolute -z-20 object-cover object-bottom opacity-80 blur-[4px] saturate-0"
       />
-      <div className="absolute top-0 -z-10 h-svh w-screen bg-black bg-opacity-40" />
-      <div className="flex flex-col items-center gap-20 text-center text-background">
-        <div className="flex flex-col gap-4 text-start font-slight">
-          <Hero variant="light">Shinta</Hero>
-          <Typography variant="xl/regular" className="self-center uppercase text-white">
-            &amp;
+      <div className="absolute top-0 -z-10 h-dvh w-screen" />
+      <div className="flex flex-col items-center gap-10 pt-20 text-center">
+        <Typography as="p" variant="md/regular" className="max-w-[20ch] uppercase text-[#464646]">
+          Je bent uitgenodigd voor de bruiloft van
+        </Typography>
+        <div className="flex flex-col gap-4 text-start ">
+          <Hero variant="light" className="font-sloop">
+            Shinta
+          </Hero>
+          <Typography variant="xl/regular" className="self-center uppercase text-[#464646]">
+            EN
           </Typography>
-          <Hero variant="light">Nigel</Hero>
+          <Hero variant="light" className="font-sloop">
+            Nigel
+          </Hero>
         </div>
         <LoginForm />
       </div>

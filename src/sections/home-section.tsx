@@ -11,13 +11,13 @@ export function HomeSection() {
       <ParallaxHero />
       {/* <div className="absolute top-0 -z-10 h-svh w-screen bg-black bg-opacity-40" /> */}
       <div className="container mt-20 flex h-full flex-col justify-center gap-8 text-center text-white md:mt-32 md:justify-center">
-        <Hero variant="light" className="font-slight">
+        <Hero variant="light" className="font-sloop">
           Shinta
         </Hero>
-        <Typography as="span" variant="xl/regular" className="-mt-4 font-garamond tracking-widest text-white">
+        <Typography as="span" variant="xl/regular" className="-mt-4 font-geist tracking-widest text-white">
           EN
         </Typography>
-        <Hero variant="light" className="font-slight">
+        <Hero variant="light" className="font-sloop">
           Nigel
         </Hero>
         <Typography variant="md/semibold" className="pt-10 text-background">

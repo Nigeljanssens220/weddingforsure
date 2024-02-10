@@ -15,11 +15,13 @@ module.exports = {
         geist: ['var(--font-geist-sans)'],
         slight: ['var(--font-slight)'],
         garamond: ['var(--font-garamond)'],
+        sloop: ['var(--font-sloop)'],
       },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+        beige: '#FFFDF9',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
