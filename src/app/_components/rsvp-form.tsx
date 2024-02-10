@@ -93,7 +93,7 @@ export default function RsvpForm() {
               <div className="flex items-center gap-2">
                 <Switch id="plus-one" checked={fields.length > 1} onCheckedChange={handleAddOrRemovePlusOne} />
                 <Typography as="label" htmlFor="plus-one" variant="sm/regular">
-                  Plus één knapperd?
+                  Plus een knapperd?
                 </Typography>
               </div>
             )}
