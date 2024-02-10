@@ -140,7 +140,7 @@ export default function RsvpForm() {
         )}
         <Button
           type="submit"
-          className="w-fit max-w-sm self-end rounded-full px-8"
+          className="w-fit max-w-sm self-end rounded-full bg-[#87926A] px-8"
           disabled={formMethods.formState.isSubmitting}
         >
           {formMethods.formState.isSubmitting ? 'Laden...' : 'RSVP'}
