@@ -159,7 +159,7 @@ export default function Home() {
             See you there!
           </Typography>
         </div>
-        <footer className="flex w-screen items-center justify-between bg-[#F9F6F0] px-20 py-4">
+        <footer className="flex w-screen items-center justify-evenly bg-[#F9F6F0] py-4">
           <Typography as="p" variant="lg/regular" className="font-eaves">
             Buitenplaats Sparrendaal
           </Typography>
