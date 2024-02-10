@@ -4,7 +4,7 @@ export function SleepSection() {
   return (
     <div
       id="sleep"
-      className="min-h-h-dvh flex w-screen max-w-screen-md flex-col items-center gap-10 px-10 py-10 text-center "
+      className="min-h-h-dvh flex w-screen max-w-screen-md flex-col items-center gap-10 px-10 py-[120px] text-center "
     >
       <div className="space-y-4">
         <Typography as="h3" className="text-3xl font-semibold">
