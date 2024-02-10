@@ -9,7 +9,7 @@ const PhotoPage = ({ params: { id } }: Params) => {
     <Image
       fill
       quality={100}
-      src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_1920,f_auto,q_auto/v1705758405/Michelle.Cole.Wedding-0248_gzyi2d.jpg"
+      src={`https://res.cloudinary.com/dmdewqwqf/image/upload/f_auto,q_auto,w_auto/v1707564556/wedding/${id}.png`}
       alt="nigel-and-shinta-g"
       className="h-dvh w-screen object-cover object-top"
     />

@@ -18,9 +18,9 @@ const PhotoInterceptor = ({ params: { id } }: Params) => {
           quality={100}
           width={1920}
           height={1080}
-          src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_1920,f_auto,q_auto/v1705758405/Michelle.Cole.Wedding-0248_gzyi2d.jpg"
+          src={`https://res.cloudinary.com/dmdewqwqf/image/upload/f_auto,q_auto,w_auto/v1707564556/wedding/${id}.png`}
           alt="nigel-and-shinta-g"
-          className="h-[50dvh] w-screen object-cover object-top"
+          className="h-dvh w-screen object-cover object-top"
         />
       </DialogContent>
     </Dialog>
