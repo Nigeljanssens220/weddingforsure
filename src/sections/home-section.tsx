@@ -21,7 +21,7 @@ export function HomeSection() {
         alt="nigel-and-shinta-g"
         className="absolute -z-20 max-h-svh w-screen object-cover object-bottom"
       />
-      <motion.div style={{ y }} className="flex flex-col items-center gap-10 pt-[136px] text-center lg:pt-16">
+      <motion.div style={{ y }} className="flex flex-col items-center gap-10 pt-24 text-center lg:pt-16">
         <div>
           <Typography as="p" variant="md/regular" className="uppercase tracking-widest text-[#464646]">
             Buitenplaats Sparrendaal
