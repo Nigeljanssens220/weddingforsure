@@ -298,8 +298,27 @@ const FAQ = () => {
                 Wie kan ik storen met al mijn vragen?
               </Typography>
               <Typography as="p">
-                XXX is onze ceremoniemeester. Hij zal jullie op de dag zelf begeleiden en is ook bereikbaar voor al
-                jullie vragen. Zijn contactgegevens zijn te vinden in de uitnodiging.
+                <b>Dylan Janssens</b> is onze ceremoniemeester. Hij zal jullie op de dag zelf begeleiden en is ook
+                bereikbaar voor al jullie vragen. Je kunt zijn contactgegevens hieronder vinden of in de{' '}
+                <Link href="/#ceremoniemeester" className="underline underline-offset-4">
+                  Ceremoniemeester
+                </Link>{' '}
+                sectie.
+                <br />
+                <br />
+                <div className="flex flex-col gap-2 text-start">
+                  <Typography as="h3" variant="xl/semibold">
+                    Dylan Janssens
+                  </Typography>
+                  <div className="flex flex-col">
+                    <Typography as="a" href="mailto:d.t.janssens@gmail.com" className="w-fit">
+                      d.t.janssens@gmail.com
+                    </Typography>
+                    <Typography as="a" href="tel:+31683562869" className="w-fit">
+                      +31 6 83562869
+                    </Typography>
+                  </div>
+                </div>
               </Typography>
             </div>
           </article>
