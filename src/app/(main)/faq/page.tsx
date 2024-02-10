@@ -10,13 +10,17 @@ const FAQ = () => {
   return (
     <SmoothScroll>
       <section className="my-20 selection:bg-foreground selection:text-background md:my-32">
-        <div className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
-          <Typography className="max-w-lg text-4xl md:text-7xl" as="h2">
+        <div className="mx-auto mb-6 grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
+          <Typography as="h1" className="text-5xl text-black md:col-span-2 md:text-center md:text-7xl">
+            Frequently Asked Questions
+          </Typography>
+          <Separator className="mt-6 bg-black md:md:col-span-2 md:my-20" />
+          <Typography className="max-w-lg text-4xl text-black md:text-7xl" as="h2">
             Bruiloft en thema
           </Typography>
           <article className="space-y-8">
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Huh, het zou toch op 3 augustus 2024 plaatsvinden?
               </Typography>
               <Typography as="p">
@@ -25,7 +29,7 @@ const FAQ = () => {
               </Typography>
             </div>
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Is mijn plus één welkom?
               </Typography>
               <Typography as="p">
@@ -36,7 +40,7 @@ const FAQ = () => {
               </Typography>
             </div>
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Mag ik mijn kinderen meenemen?
               </Typography>
               <Typography as="p">
@@ -45,7 +49,7 @@ const FAQ = () => {
               </Typography>
             </div>
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Hoe zien jullie de dress code voor je?
               </Typography>
               <Typography as="p">
@@ -64,7 +68,7 @@ const FAQ = () => {
               </Typography>
             </div>
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Moet ik mij kleden op het weer?
               </Typography>
               <Typography as="p">
@@ -75,15 +79,15 @@ const FAQ = () => {
               </Typography>
             </div>
           </article>
+          <Separator className="mt-6 bg-black md:col-span-2 md:my-20" />
         </div>
-        <Separator className="col-span-2 my-16 bg-black md:my-20" />
-        <div className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
-          <Typography className="max-w-lg text-4xl md:text-7xl" as="h2">
+        <div className="mx-auto mb-6 grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
+          <Typography className="max-w-lg text-4xl text-black md:text-7xl" as="h2">
             RSVP
           </Typography>
           <article className="space-y-8">
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Is de RSVP verplicht?
               </Typography>
               <Typography as="p">
@@ -92,7 +96,7 @@ const FAQ = () => {
               </Typography>
             </div>
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Voldoet een online RSVP of moet ik nog reageren op de uitnodiging?
               </Typography>
               <Typography as="p">
@@ -101,7 +105,7 @@ const FAQ = () => {
               </Typography>
             </div>
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Is er een deadline om te RSVPen?
               </Typography>
               <Typography as="p">
@@ -110,15 +114,15 @@ const FAQ = () => {
               </Typography>
             </div>
           </article>
+          <Separator className="mt-6 bg-black md:col-span-2 md:my-20" />
         </div>
-        <Separator className="col-span-2 my-16 bg-black md:my-20" />
-        <div className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
-          <Typography className="max-w-lg text-4xl md:text-7xl" as="h2">
+        <div className="mx-auto mb-6 grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
+          <Typography className="max-w-lg text-4xl text-black md:text-7xl" as="h2">
             Foto- en videografie
           </Typography>
           <article className="space-y-8">
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Is er een foto en/of video policy?
               </Typography>
               <Typography as="p">
@@ -133,15 +137,15 @@ const FAQ = () => {
               </Typography>
             </div>
           </article>
+          <Separator className="mt-6 bg-black md:col-span-2 md:my-20" />
         </div>
-        <Separator className="col-span-2 my-16 bg-black md:my-20" />
-        <div className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
-          <Typography className="max-w-lg text-4xl md:text-7xl" as="h2">
+        <div className="mx-auto mb-6 grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
+          <Typography className="max-w-lg text-4xl text-black md:text-7xl" as="h2">
             Locatie, verblijf en transport
           </Typography>
           <article className="space-y-8">
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Vindt de bruiloft binnen of buiten plaats?
               </Typography>
               <Typography as="p">
@@ -152,7 +156,7 @@ const FAQ = () => {
               </Typography>
             </div>
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Wat is het adres van de trouwlocatie?
               </Typography>
               <a
@@ -172,7 +176,7 @@ const FAQ = () => {
               </Typography>
             </div>
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Hoe zit het met de parkeergelegenheid?
               </Typography>
               <Typography as="p">
@@ -181,7 +185,7 @@ const FAQ = () => {
               </Typography>
             </div>
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Wat is de beste manier om daar te komen?
               </Typography>
               <Typography as="p">
@@ -191,7 +195,7 @@ const FAQ = () => {
               </Typography>
             </div>
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Zijn er kamers gereserveerd voor de gasten, of waar kan ik verblijven?
               </Typography>
               <Typography as="p">
@@ -204,7 +208,7 @@ const FAQ = () => {
               </Typography>
             </div>
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Is er een shuttle service van en/of naar de hotels?
               </Typography>
               <Typography as="p">
@@ -213,15 +217,15 @@ const FAQ = () => {
               </Typography>
             </div>
           </article>
+          <Separator className="mt-6 bg-black md:col-span-2 md:my-20" />
         </div>
-        <Separator className="col-span-2 my-16 bg-black md:my-20" />
-        <div className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
-          <Typography className="max-w-lg text-4xl md:text-7xl" as="h2">
+        <div className="mx-auto mb-6 grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
+          <Typography className="max-w-lg text-4xl text-black md:text-7xl" as="h2">
             Menu en dieetwensen
           </Typography>
           <article className="space-y-8">
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Wat voor eten wordt er geserveerd tijdens het diner?
               </Typography>
               <Typography as="p">
@@ -229,7 +233,7 @@ const FAQ = () => {
               </Typography>
             </div>
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Zijn er alternatieven voor het diner beschikbaar?
               </Typography>
               <Typography as="p">
@@ -239,7 +243,7 @@ const FAQ = () => {
               </Typography>
             </div>
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Is er een open bar?
               </Typography>
               <Typography as="p">
@@ -248,15 +252,15 @@ const FAQ = () => {
               </Typography>
             </div>
           </article>
+          <Separator className="mt-6 bg-black md:col-span-2 md:my-20" />
         </div>
-        <Separator className="col-span-2 my-16 bg-black md:my-20" />
-        <div className="mx-auto grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
-          <Typography className="max-w-lg text-4xl md:text-7xl" as="h2">
+        <div className="mx-auto mb-6 grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
+          <Typography className="max-w-lg text-4xl text-black md:text-7xl" as="h2">
             Overige vragen
           </Typography>
           <article className="space-y-8">
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Doen jullie aan huwelijkscadeaus?
               </Typography>
               <Typography as="p">
@@ -269,7 +273,7 @@ const FAQ = () => {
               </Typography>
             </div>
             <div className="space-y-1">
-              <Typography className="text-xl font-semibold" as="h3">
+              <Typography className="text-xl font-semibold text-black" as="h3">
                 Wie kan ik storen met al mijn vragen?
               </Typography>
               <Typography as="p">

@@ -21,9 +21,9 @@ export function HomeSection() {
         alt="nigel-and-shinta-g"
         className="absolute -z-20 max-h-svh w-screen object-cover object-bottom"
       />
-      <motion.div style={{ y }} className="flex flex-col items-center gap-10 pt-[152px] text-center lg:pt-16">
+      <motion.div style={{ y }} className="flex flex-col items-center gap-10 pt-[136px] text-center lg:pt-16">
         <div>
-          <Typography as="p" variant="md/regular" className="uppercase text-[#464646]">
+          <Typography as="p" variant="md/regular" className="uppercase tracking-widest text-[#464646]">
             Buitenplaats Sparrendaal
           </Typography>
           <Typography as="p" variant="md/regular" className="uppercase text-[#464646]">
@@ -34,7 +34,7 @@ export function HomeSection() {
           <Hero variant="light" className="-ml-4 font-sloop">
             Shinta
           </Hero>
-          <Typography variant="xl/regular" className="-mt-2 self-center uppercase text-[#464646]">
+          <Typography variant="xl/regular" className="-mt-2 self-center uppercase tracking-widest text-[#464646]">
             EN
           </Typography>
           <Hero variant="light" className="-ml-4 font-sloop">

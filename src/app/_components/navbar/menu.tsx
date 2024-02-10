@@ -7,7 +7,6 @@ import { MenuIcon, X } from 'lucide-react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
-import nigelAndShintaG from '../../../../public/images/cocktail.svg'
 import Typography from '../ui/typography'
 
 const menuAnimation = {
@@ -95,29 +94,29 @@ export function Menu({ className }: { className?: string }) {
             exit="exit"
             className="fixed left-0 top-0 z-50 h-screen w-full origin-top bg-[#C6C4A4] p-4 text-[#5D5C4E]"
           >
-            <div className="relative flex h-full flex-col justify-center">
+            <div className="relative flex h-full flex-col justify-start">
               <header className="fixed left-0 top-0 flex w-full justify-end p-4">
                 <button type="button" className="px-4 py-2" onClick={() => setOpen(false)}>
                   <X className="h-6 w-6 text-[#5D5C4E]" />
                 </button>
               </header>
-              <div className="flex flex-col items-center gap-10">
+              <div className="mt-20 flex flex-col items-center gap-10">
                 <motion.div variants={footerAnimation} initial="initial" animate="open" exit="initial">
                   <Image
-                    quality={80}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    src={nigelAndShintaG as string}
-                    alt="nigel-and-shinta-g"
+                    src="https://res.cloudinary.com/dmdewqwqf/image/upload/f_auto,q_auto/v1707564556/wedding/hm3nn14zgd3em9bzujgl.png"
+                    alt="s-n-logo"
+                    width={250}
+                    height={100}
+                    className="object-cover"
                   />
                 </motion.div>
-
                 <nav>
                   <motion.ul
                     variants={linksAnimation}
                     initial="initial"
                     animate="open"
                     exit="initial"
-                    className="flex flex-col items-center justify-center gap-4"
+                    className="flex flex-col items-center justify-center gap-6"
                   >
                     {routes.map(({ href, label }, idx) => (
                       <li key={`item-${idx}`} className="overflow-hidden">
@@ -132,7 +131,13 @@ export function Menu({ className }: { className?: string }) {
                               router.push(href)
                             }}
                           >
-                            {label}
+                            <Typography
+                              as="span"
+                              variant="xl/regular"
+                              className="font-eaves tracking-widest text-[#5D5C4E]"
+                            >
+                              {label}
+                            </Typography>
                           </button>
                         </motion.div>
                       </li>
@@ -148,13 +153,13 @@ export function Menu({ className }: { className?: string }) {
                 className="fixed bottom-0 left-0 flex w-full justify-center gap-6 p-4 text-center text-sm uppercase"
               >
                 <Typography as="span" className="text-xs" variant="xs/regular">
-                  Buitenplaats Vaeshartelt
+                  Buitenplaats Sparrendaal
                 </Typography>
                 <Typography as="span" className="text-xs" variant="xs/regular">
                   •
                 </Typography>
                 <Typography as="span" className="text-xs" variant="xs/regular">
-                  03-08-2024
+                  07-08-2024
                 </Typography>
               </motion.footer>
             </div>

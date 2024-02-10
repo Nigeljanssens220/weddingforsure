@@ -4,7 +4,7 @@ import type { PolymorphicComponentPropsWithRef, PolymorphicRef } from '@/types'
 import { cva, type VariantProps } from 'class-variance-authority'
 import React, { forwardRef } from 'react'
 
-export const typographyStyles = cva('text-foreground', {
+export const typographyStyles = cva('text-[#464646]', {
   variants: {
     size: {
       xs: 'text-xs',
