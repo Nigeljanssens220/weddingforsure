@@ -1,4 +1,4 @@
-import { Line } from '@/app/_components/ui/line'
+import ScrollReveal from '@/app/_components/ui/animated/scroll-reveal'
 import Typography from '@/app/_components/ui/typography'
 
 export function TimelineSection() {
@@ -12,8 +12,8 @@ export function TimelineSection() {
         quibusdam sunt et minima. Deleniti veniam eum tempora quibusdam ipsa expedita corporis officiis enim est.
       </Typography>
       <div className="relative flex min-h-96 flex-col gap-16">
-        <Line />
-        <div className="grid grid-cols-2 gap-20">
+        {/* <Line /> */}
+        <ScrollReveal className="grid grid-cols-2 gap-20">
           <Typography as="h3" className="text-right text-3xl font-semibold">
             Logo
           </Typography>
@@ -21,8 +21,8 @@ export function TimelineSection() {
             14:30
             <span className="uppercase">Ontvangst</span>
           </Typography>
-        </div>
-        <div className="grid grid-cols-2 gap-20">
+        </ScrollReveal>
+        <ScrollReveal className="grid grid-cols-2 gap-20">
           <Typography as="p" className="flex flex-col text-right italic">
             15:00
             <span className="uppercase">Ceremonie</span>
@@ -30,8 +30,8 @@ export function TimelineSection() {
           <Typography as="h3" className="text-left text-3xl font-semibold">
             Logo
           </Typography>
-        </div>
-        <div className="grid grid-cols-2 gap-20">
+        </ScrollReveal>
+        <ScrollReveal className="grid grid-cols-2 gap-20">
           <Typography as="h3" className="text-right text-3xl font-semibold">
             Logo
           </Typography>
@@ -39,8 +39,8 @@ export function TimelineSection() {
             16:00
             <span className="uppercase">Taart & Toast</span>
           </Typography>
-        </div>
-        <div className="grid grid-cols-2 gap-20">
+        </ScrollReveal>
+        <ScrollReveal className="grid grid-cols-2 gap-20">
           <Typography as="p" className="flex flex-col text-right italic">
             16:30
             <span className="uppercase">Borrel</span>
@@ -48,8 +48,8 @@ export function TimelineSection() {
           <Typography as="h3" className="text-left text-3xl font-semibold">
             Logo
           </Typography>
-        </div>
-        <div className="grid grid-cols-2 gap-20">
+        </ScrollReveal>
+        <ScrollReveal className="grid grid-cols-2 gap-20">
           <Typography as="h3" className="text-right text-3xl font-semibold">
             Logo
           </Typography>
@@ -57,8 +57,8 @@ export function TimelineSection() {
             18:00
             <span className="uppercase">Diner</span>
           </Typography>
-        </div>
-        <div className="grid grid-cols-2 gap-20">
+        </ScrollReveal>
+        <ScrollReveal className="grid grid-cols-2 gap-20">
           <Typography as="p" className="flex flex-col text-right italic">
             21:00
             <span className="font-normal">Dansen</span>
@@ -66,7 +66,7 @@ export function TimelineSection() {
           <Typography as="h3" className="text-left text-3xl font-semibold">
             Logo
           </Typography>
-        </div>
+        </ScrollReveal>
       </div>
     </div>
   )

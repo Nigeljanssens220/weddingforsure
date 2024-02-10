@@ -85,7 +85,7 @@ export function Menu({ className }: { className?: string }) {
   const router = useRouter()
 
   return (
-    <div className={cn('relative self-end', className)}>
+    <div className={cn('fixed right-4 top-4 z-10 self-end md:hidden', className)}>
       <AnimatePresence mode="wait">
         {open && (
           <motion.div
