@@ -9,9 +9,9 @@ export const typographyStyles = cva('text-foreground', {
     size: {
       xs: 'text-xs',
       sm: 'text-sm',
-      md: 'text-md',
-      lg: 'text-lg',
-      xl: 'text-xl',
+      md: 'text-lg',
+      lg: 'text-xl',
+      xl: 'text-2xl',
     },
     weight: {
       italic: 'italic',

@@ -26,7 +26,9 @@ export function LocationSection() {
             href="https://swijnenburg.com/locatie/buitenplaats-sparrendaal/"
             className="flex items-center"
           >
-            <span className="font-semibold">Buitenplaats Sparrendaal</span>
+            <Typography as="span" className="font-semibold">
+              Buitenplaats Sparrendaal
+            </Typography>
             <ExternalLink className="ml-2 size-4 text-foreground" />
           </a>
           <Typography as="p">Hoofdstraat 89</Typography>
