@@ -86,16 +86,12 @@ export default function RsvpForm() {
       <form
         ref={parent}
         onSubmit={formMethods.handleSubmit(handleCreateRsvp)}
-        className="mb-6 flex w-full max-w-xl flex-col gap-8 bg-[#F8F5EF] p-8"
+        className="my-6 flex w-full max-w-xl flex-col gap-8 bg-[#F8F5EF] p-8"
       >
         <Alert className="flex items-center justify-center">
           <AlertTitle>Reageer voor 1 juni 2024!</AlertTitle>
         </Alert>
-        <Typography as="p">
-          We kunnen niet wachten om onze bruiloft met jullie te vieren! Maar, we moeten wel weten of je de moves hebt.
-          Vul het formulier hieronder in om te laten weten of je komt, wat je eet en of je een plus one meeneemt. Dan
-          zorgen wij voor een plekje op de eerste rij, lekker eten en een plekje op de dansvloer!
-        </Typography>
+
         {fields.map((field, index) => (
           <div key={field.id} className="flex flex-col gap-6">
             <Typography variant="xl/semibold" as="h3" className="-mb-2">
@@ -140,7 +136,7 @@ export default function RsvpForm() {
         )}
         <Button
           type="submit"
-          className="w-fit max-w-sm self-end rounded-full bg-[#87926A] px-8"
+          className="w-fit max-w-sm self-end rounded-lg bg-[#87926A] px-8"
           disabled={formMethods.formState.isSubmitting}
         >
           {formMethods.formState.isSubmitting ? 'Laden...' : 'RSVP'}
