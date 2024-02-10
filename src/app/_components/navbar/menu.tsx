@@ -92,7 +92,7 @@ export function Menu({ className }: { className?: string }) {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="fixed left-0 top-0 z-50 h-screen w-full origin-top bg-[#C6C4A4] p-4 text-[#5D5C4E]"
+            className="fixed left-0 top-0 z-50 h-svh w-full origin-top bg-[#C6C4A4] p-4 text-[#5D5C4E]"
           >
             <div className="relative flex h-full flex-col justify-start">
               <header className="fixed left-0 top-0 flex w-full justify-end p-4">
@@ -105,7 +105,7 @@ export function Menu({ className }: { className?: string }) {
                   <Image
                     src="https://res.cloudinary.com/dmdewqwqf/image/upload/f_auto,q_auto/v1707564556/wedding/hm3nn14zgd3em9bzujgl.png"
                     alt="s-n-logo"
-                    width={200}
+                    width={150}
                     height={100}
                     className="object-cover"
                   />
@@ -116,7 +116,7 @@ export function Menu({ className }: { className?: string }) {
                     initial="initial"
                     animate="open"
                     exit="initial"
-                    className="flex flex-col items-center justify-center gap-6"
+                    className="flex flex-col items-center justify-center gap-4"
                   >
                     {routes.map(({ href, label }, idx) => (
                       <li key={`item-${idx}`} className="overflow-hidden">

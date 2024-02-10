@@ -107,11 +107,10 @@ export default function RsvpForm() {
               type="email"
               placeholder="thenishiwedding@marryme.com"
             />
-            <FormRadioGroup
-              name={`person.${index}.menuOptions`}
-              label="Diner voorkeuren"
-              items={menuOptions as unknown as string[]}
-            />
+            <div className="flex items-start gap-2">
+              {/* @ts-expect-error - bla */}
+              <FormRadioGroup name={`person.${index}.menuOptions`} label="Diner voorkeuren" items={menuOptions} />
+            </div>
             <FormTextArea
               name={`person.${index}.dietaryRestrictions` as const}
               label="Overige opmerkingen diner"
