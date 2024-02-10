@@ -94,9 +94,6 @@ export default function RsvpForm() {
 
         {fields.map((field, index) => (
           <div key={field.id} className="flex flex-col gap-6">
-            <Typography variant="xl/semibold" as="h3" className="-mb-2">
-              {index === 0 ? 'Jij' : 'Je wederhelft'}
-            </Typography>
             <FormTextField name={`person.${index}.name` as const} placeholder="Name" />
             <FormTextField
               name={`person.${index}.email` as const}
@@ -124,7 +121,7 @@ export default function RsvpForm() {
         ))}
         <FormRadioGroup
           name="rsvpOptions"
-          label="Selecteer een RSVP optie!"
+          label="Selecteer een RSVP optie"
           items={rsvpOptions as unknown as string[]}
         />
 
