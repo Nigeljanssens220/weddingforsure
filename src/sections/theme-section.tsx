@@ -13,8 +13,9 @@ export function ThemeSection() {
           Thema
         </Typography>
         <Typography as="p">
-          Vier onze liefde in stijl in het thema <q>Whimsical Summer</q>. We willen jullie vragen om uit te pakken:
-          Underdressed bestaat niet!
+          Uiteraard hopen we dat jullie met ons uitpakken in jullie outfit. Ons thema is <q>Whimsical Summer</q>, dat
+          betekent dat vooral veel kleur! Wat ons betreft is niks te gek. Wees vooral jezelf en trek aan waar jij je
+          prettig in voelt. We hebben er zin in!
         </Typography>
       </div>
       <div className="flex items-center justify-center gap-4">
@@ -23,15 +24,8 @@ export function ThemeSection() {
         <div className="h-8 w-8 rounded-full bg-[#E8C37B]" />
         <div className="h-8 w-8 rounded-full bg-[#EAB4C1]" />
       </div>
-      {/* <Image
-        src="https://res.cloudinary.com/dmdewqwqf/image/upload/f_auto,q_auto,w_auto/v1707564556/wedding/vzxnlqpwnwymdxgwynad.png"
-        alt="Wedding theme women"
-        width={400}
-        height={800}
-        className="object-cover"
-      /> */}
+
       <Link href={'/photos/vzxnlqpwnwymdxgwynad'}>
-        {/* todo image carousel voor vrouwen/mannen */}
         <Image
           src="https://res.cloudinary.com/dmdewqwqf/image/upload/f_auto,q_auto,w_auto/v1707564556/wedding/vzxnlqpwnwymdxgwynad.png"
           alt="Wedding theme women"

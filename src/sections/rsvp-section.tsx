@@ -21,8 +21,8 @@ export function RSVPSection() {
           You&apos;re invited!
         </Typography>
         <Typography as="p">
-          Join us as we say &quot;I do&quot; and celebrate our love on August 7th, 2024 at Buitenplaats Sparrendaal.
-          Your presence will make our special day truly complete.
+          Wij vinden het super leuk om met jullie onze liefde te vieren op 7 augustus 2024 op Buitenplaats Sparrendaal.
+          Met jullie aanwezigheid zal het extra speciaal worden. Zijn jullie erbij?
         </Typography>
       </div>
       <Link

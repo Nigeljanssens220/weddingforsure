@@ -17,9 +17,9 @@ export function SleepSection() {
       </div>
 
       <Typography as="p">
-        * Helaas is het voor ons niet mogelijk om voor iedereen overnachting te verzorgen. Eventuele overnachtingen
-        dienen dus zelf geregeld en betaald te worden. Laat ons even weten als je een hotel hebt geboekt, dan kunnen wij
-        het vervoer regelen voor na het feest!
+        * Helaas is het voor ons niet mogelijk om voor iedereen een hotelovernachting te verzorgen. In de RSVP staat er
+        een optie om aan te geven of je geïnteresseerd bent in een hotelovernachting. Als er genoeg interesse is, zullen
+        wij een hotel proberen te regelen met een groepskorting en een kamer in dezelfde sectie van het hotel!
       </Typography>
     </div>
   )

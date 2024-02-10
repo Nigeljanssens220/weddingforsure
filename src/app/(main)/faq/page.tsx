@@ -2,7 +2,7 @@ import { ChefsMenuContent } from '@/app/_components/chefs-menu'
 import { SmoothScroll } from '@/app/_components/smooth-scroll-wrapper'
 import { Separator } from '@/app/_components/ui/separator'
 import Typography from '@/app/_components/ui/typography'
-import { ExternalLink } from 'lucide-react'
+import { ExternalLink, ExternalLinkIcon } from 'lucide-react'
 import Link from 'next/link'
 
 export const dynamic = 'force-static'
@@ -111,7 +111,7 @@ const FAQ = () => {
               </Typography>
               <Typography as="p">
                 Omdat wij de hoeveelheid gasten en eventuele dieetwensen moeten doorgaven aan de trouwlocatie, hebben
-                wij een harde deadline gesteld op XX-XX-2024 om aan te geven of je erbij kunt zijn.
+                wij een harde deadline gesteld op 1 juni 2024 om aan te geven of je erbij kunt zijn.
               </Typography>
             </div>
           </article>
@@ -181,8 +181,17 @@ const FAQ = () => {
                 Hoe zit het met de parkeergelegenheid?
               </Typography>
               <Typography as="p">
-                Er is beperkte plek om te parkeren voor de deur. Wij raden aan om de door de trouwlocatie aangegeven
-                parkeerplaats te gebruiken. Deze bevindt zich op 5 minuten loopafstand van de locatie.
+                Omdat het niet mogelijk is om te parkeren voor de deur, raden wij aan om de door de trouwlocatie
+                aangegeven parkeerplaats te gebruiken. Hier is ruimte voor 75 voertuigen. Je kan gratis parkeren op het
+                nabijgelegen parkeerterrein aan de
+                <a
+                  className="flex items-center underline underline-offset-4"
+                  href="https://www.google.com/maps/place/Buitenplaats+Sparrendaal+Parking/@52.0540474,5.2813052,18z/data=!4m15!1m8!3m7!1s0x47c65d20c292a359:0x94e8d548975e4c8d!2sBosstraat,+Driebergen-Rijsenburg!3b1!8m2!3d52.0559424!4d5.2861761!16s%2Fg%2F1tdh7njr!3m5!1s0x47c65dc42d438fbf:0xe819261dd49886fc!8m2!3d52.0539319!4d5.281465!16s%2Fg%2F11rs9p3h1b?entry=ttu"
+                >
+                  Bosstraat, Driebergen-Rijsenburg.
+                  <ExternalLinkIcon className="ml-2 size-4 text-foreground" />
+                </a>
+                Binnen 1 minuut wandel je via de parktuin naar het landhuis!
               </Typography>
             </div>
             <div className="space-y-1">
@@ -202,10 +211,16 @@ const FAQ = () => {
               <Typography as="p">
                 Wij hebben vooraf geen kamers gereserveerd voor de gasten, maar er zijn een aantal hotels in de buurt
                 van de trouwlocatie. Wij raden aan om een hotel te boeken in Driebergen-Rijsenburg, Zeist of Utrecht.
+                Zie{' '}
+                <Link href="/#sleep" className="underline underline-offset-4">
+                  Overnachten
+                </Link>
+                .
                 <br />
                 <br />
                 Tip: in de RSVP is er een optie om aan te geven of je geïnteresseerd bent in een hotelovernachting. Als
-                er genoeg interesse is, zullen wij een hotel proberen te regelen met een groepskorting.
+                er genoeg interesse is, zullen wij een hotel proberen te regelen met een groepskorting en een kamer in
+                dezelfde sectie van het hotel
               </Typography>
             </div>
             <div className="space-y-1">

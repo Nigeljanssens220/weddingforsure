@@ -13,9 +13,10 @@ export function TimelineSection() {
         <Typography as="h3" className="text-3xl font-semibold">
           Tijdlijn
         </Typography>
-        <Typography as="p" className="max-w-[62ch]">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam praesentium assumenda autem vero soluta totam
-          quibusdam sunt et minima. Deleniti veniam eum tempora quibusdam ipsa expedita corporis officiis enim est.
+        <Typography as="p">
+          De volgorde van de dag zal in grote lijnen eruit zien als de onderstaande afbeelding. Uiteraard kan het
+          voorkomen dat we op bepaalde onderdelen uitlopen en die ruimte is er gelukkig. Het is wel belangrijk dat
+          jullie uiterlijk 14.30 aanwezig zijn voor het ontvangst met een lekker hapje en drankje!
         </Typography>
       </div>
       <div className="relative flex min-h-96 flex-col gap-16">
