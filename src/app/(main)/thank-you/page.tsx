@@ -12,11 +12,11 @@ export default function ThankYouPage() {
       <div className="absolute left-0 top-0 -z-10 h-dvh w-screen bg-white bg-opacity-60" />
       <Image
         quality={100}
-        width={640}
+        width={1920}
         height={130}
         src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_100/v1707551624/wedding/qrbk4cg2c1ahkvbgdgef.jpg"
         alt="staring-lovely-couple"
-        className="absolute left-0 top-0 -z-20 h-dvh w-screen object-cover object-top"
+        className="absolute left-0 top-0 -z-20 h-dvh w-screen object-cover object-top md:object-center"
       />
       <div className="flex flex-col items-center gap-4 text-center">
         <Typography variant="xl/semibold" as="h1" className="text-4xl text-black">

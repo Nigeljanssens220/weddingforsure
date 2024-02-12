@@ -33,10 +33,9 @@ export default function RsvpForm() {
           email: '',
           dietaryRestrictions: '',
           menuOptions: 'Regulier',
+          rsvpOptions: rsvpOptions.at(0),
         },
       ],
-      rsvpOptions: rsvpOptions.at(0),
-      // rsvpOptions: 'Anders',
     },
   })
 
@@ -46,27 +45,27 @@ export default function RsvpForm() {
   })
 
   const handleAddOrRemovePlusOne = () => {
-    fields.length > 1 ? remove(-1) : append({ name: '', email: '', dietaryRestrictions: '', menuOptions: 'Regulier' })
+    fields.length > 1
+      ? remove(-1)
+      : append({
+          name: '',
+          email: '',
+          dietaryRestrictions: '',
+          menuOptions: 'Regulier',
+          // biome-ignore lint/style/noNonNullAssertion: <explanation>
+          rsvpOptions: rsvpOptions.at(0)!,
+        })
   }
 
   const handleCreateRsvp = async (data: SchemaCreateRSVP) => {
     const usernames = data.person.map((person) => person.name)
     const emails = data.person.map((person) => person.email)
 
-    // create RSVPs in database
-    const transformedData = data.person.map((person) => {
-      return {
-        ...person,
-        rsvpOptions: data.rsvpOptions,
-        rsvpOptionsOther: data.rsvpOptionsOther,
-      }
-    })
-
     await Promise.all([
       // biome-ignore lint/style/noNonNullAssertion: <explanation>
-      await createRsvp.mutateAsync(transformedData[0]!),
+      await createRsvp.mutateAsync(data.person.at(0)!),
       // biome-ignore lint/style/noNonNullAssertion: <explanation>
-      !!transformedData.at(1) && (await createRsvp.mutateAsync(transformedData.at(1)!)),
+      !!data.person.at(1) && (await createRsvp.mutateAsync(data.person.at(1)!)),
     ])
 
     const result = await sendEmail({
@@ -91,7 +90,6 @@ export default function RsvpForm() {
         <Alert className="flex items-center justify-center">
           <AlertTitle>Reageer voor 1 juni 2024!</AlertTitle>
         </Alert>
-
         {fields.map((field, index) => (
           <div key={field.id} className="flex flex-col gap-6">
             <FormTextField name={`person.${index}.name` as const} placeholder="Name" />
@@ -105,6 +103,17 @@ export default function RsvpForm() {
               label="Overige opmerkingen diner"
               placeholder="Geef hier aan of je allergieën hebt, of andere dieetwensen."
             />
+            <FormRadioGroup
+              name={`person.${index}.rsvpOptions`}
+              label="Selecteer een RSVP optie"
+              items={rsvpOptions as unknown as string[]}
+            />
+            {formMethods.watch(`person.${index}.rsvpOptions`) === 'Anders' && (
+              <FormTextArea
+                name="rsvpOptionsOther"
+                placeholder="Vul hier maar gewoon in waarom je zo moeilijk doet en op welke delen je wel/niet komt."
+              />
+            )}
             {index === 0 && (
               <div className="flex items-center gap-2">
                 <Switch id="plus-one" checked={fields.length > 1} onCheckedChange={handleAddOrRemovePlusOne} />
@@ -115,18 +124,6 @@ export default function RsvpForm() {
             )}
           </div>
         ))}
-        <FormRadioGroup
-          name="rsvpOptions"
-          label="Selecteer een RSVP optie"
-          items={rsvpOptions as unknown as string[]}
-        />
-
-        {formMethods.watch('rsvpOptions') === 'Anders' && (
-          <FormTextArea
-            name="rsvpOptionsOther"
-            placeholder="Vul hier maar gewoon in waarom je zo moeilijk doet en op welke delen je wel/niet komt."
-          />
-        )}
         <Button
           type="submit"
           className="w-fit max-w-sm self-end rounded-lg bg-[#87926A] px-8"

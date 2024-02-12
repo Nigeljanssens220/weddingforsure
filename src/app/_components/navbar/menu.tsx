@@ -92,7 +92,7 @@ export function Menu({ className }: { className?: string }) {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="fixed left-0 top-0 z-50 h-lvh w-screen origin-top overflow-hidden bg-[#C6C4A4] p-4 text-[#5D5C4E]"
+            className="fixed left-0 top-0 z-50 h-screen w-screen origin-top overflow-hidden bg-[#C6C4A4] p-4 text-[#5D5C4E]"
           >
             <div className="relative flex h-full flex-col justify-start">
               <header className="fixed left-0 top-0 flex w-full justify-end p-4">

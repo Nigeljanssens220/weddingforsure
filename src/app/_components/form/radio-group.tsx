@@ -15,7 +15,6 @@ export function FormRadioGroup({ name, label, items }: { name: string; label: st
       name={name}
       render={({ field }) => (
         <FormItem className="space-y-3">
-          {label && <FormLabel variant="xl/semibold">{label}</FormLabel>}
           <FormControl>
             <RadioGroup
               onValueChange={field.onChange}
@@ -25,9 +24,13 @@ export function FormRadioGroup({ name, label, items }: { name: string; label: st
               {items.map((label) => (
                 <FormItem key={label} className="flex cursor-pointer items-center space-x-3 space-y-0">
                   <FormControl>
-                    <RadioGroupItem value={label} id={label} />
+                    <RadioGroupItem value={label} id={name + label} />
                   </FormControl>
-                  <FormLabel className="font-futura cursor-pointer tracking-wide" variant="md/regular" htmlFor={label}>
+                  <FormLabel
+                    className="cursor-pointer font-futura tracking-wide"
+                    variant="md/regular"
+                    htmlFor={name + label}
+                  >
                     {label}
                   </FormLabel>
                   {/* @ts-expect-error - je moer */}

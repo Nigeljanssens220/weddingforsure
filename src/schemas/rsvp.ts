@@ -11,10 +11,10 @@ export const schemaCreateRSVP = z.object({
       email: z.string().email({ message: 'Vul een geldig email adres in' }),
       dietaryRestrictions: z.string().max(256, { message: 'Mag maximaal 256 karakters bevatten' }).optional(),
       menuOptions: z.enum(menuOptions, { required_error: 'Kies een optie' }),
+      rsvpOptions: z.enum(rsvpOptions),
+      rsvpOptionsOther: z.string().max(256, { message: 'Mag maximaal 256 karakters bevatten' }).optional(),
     }),
   ),
-  rsvpOptions: z.enum(rsvpOptions),
-  rsvpOptionsOther: z.string().max(256, { message: 'Mag maximaal 256 karakters bevatten' }).optional(),
 })
 
 export type SchemaCreateRSVP = z.infer<typeof schemaCreateRSVP>
