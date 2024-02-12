@@ -1,3 +1,4 @@
+import ScrollReveal from '@/app/_components/ui/animated/scroll-reveal'
 import Typography from '@/app/_components/ui/typography'
 import Image from 'next/image'
 
@@ -23,14 +24,16 @@ export function ThemeSection() {
         <div className="h-8 w-8 rounded-full bg-[#E8C37B]" />
         <div className="h-8 w-8 rounded-full bg-[#EAB4C1]" />
       </div>
-      <Image
-        quality={100}
-        src="https://res.cloudinary.com/dmdewqwqf/image/upload/f_auto,q_auto,w_auto/v1707564556/wedding/iadxuonoewqbdnyhmpbm.jpg"
-        alt="Wedding theme women"
-        width={400}
-        height={100}
-        className="object-cover"
-      />
+      <ScrollReveal>
+        <Image
+          quality={100}
+          src="https://res.cloudinary.com/dmdewqwqf/image/upload/f_auto,q_auto,w_auto/v1707564556/wedding/iadxuonoewqbdnyhmpbm.jpg"
+          alt="Wedding theme women"
+          width={400}
+          height={100}
+          className="object-cover"
+        />
+      </ScrollReveal>
     </div>
   )
 }
