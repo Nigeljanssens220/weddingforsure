@@ -6,7 +6,7 @@ import Image from 'next/image'
 export function LocationSection() {
   return (
     <div
-      id="location"
+      id="locatie"
       className="flex w-screen max-w-screen-md flex-col items-center gap-12 px-10 py-[120px] text-center "
     >
       <div className="space-y-4">

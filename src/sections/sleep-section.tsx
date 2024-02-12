@@ -8,7 +8,7 @@ import Image from 'next/image'
 export function SleepSection() {
   return (
     <div
-      id="sleep"
+      id="overnachten"
       className="min-h-h-dvh flex w-screen max-w-screen-md flex-col items-center gap-10 px-10 py-[120px] text-center "
     >
       <div className="space-y-4">
@@ -94,7 +94,7 @@ export function SleepSection() {
           </div>
         </DialogContent>
       </Dialog>
-      <Typography as="p">
+      <Typography as="p" variant="sm/regular">
         * Helaas is het voor ons niet mogelijk om voor iedereen een hotelovernachting te verzorgen. In de RSVP staat er
         een optie om aan te geven of je geïnteresseerd bent in een hotelovernachting. Als er genoeg interesse is, zullen
         wij een hotel proberen te regelen met een groepskorting en een kamer in dezelfde sectie van het hotel!

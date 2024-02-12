@@ -95,11 +95,7 @@ export default function RsvpForm() {
         {fields.map((field, index) => (
           <div key={field.id} className="flex flex-col gap-6">
             <FormTextField name={`person.${index}.name` as const} placeholder="Name" />
-            <FormTextField
-              name={`person.${index}.email` as const}
-              type="email"
-              placeholder="thenishiwedding@marryme.com"
-            />
+            <FormTextField name={`person.${index}.email` as const} type="email" placeholder="email@marryme.com" />
             <div className="flex items-start gap-2">
               {/* @ts-expect-error - bla */}
               <FormRadioGroup name={`person.${index}.menuOptions`} label="Diner voorkeuren" items={menuOptions} />

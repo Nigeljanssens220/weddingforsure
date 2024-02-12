@@ -4,7 +4,7 @@ import Image from 'next/image'
 export function ThemeSection() {
   return (
     <div
-      id="theme"
+      id="thema"
       className="flex w-screen max-w-screen-md flex-col items-center gap-10 px-10 py-[120px] text-center "
     >
       <div className="space-y-4">
@@ -13,8 +13,8 @@ export function ThemeSection() {
         </Typography>
         <Typography as="p">
           Uiteraard hopen we dat jullie met ons uitpakken in jullie outfit. Ons thema is <q>Whimsical Summer</q>, dat
-          betekent dat vooral veel kleur! Wat ons betreft is niks te gek. Wees vooral jezelf en trek aan waar jij je
-          prettig in voelt. We hebben er zin in!
+          betekent vooral veel kleur! Wat ons betreft is niks te gek. Wees vooral jezelf en trek aan waar jij je prettig
+          in voelt. We hebben er zin in!
         </Typography>
       </div>
       <div className="flex items-center justify-center gap-4">

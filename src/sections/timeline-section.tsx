@@ -6,7 +6,7 @@ import Typography from '@/app/_components/ui/typography'
 export function TimelineSection() {
   return (
     <div
-      id="timeline"
+      id="tijdlijn"
       className="flex w-screen max-w-screen-md flex-col items-center gap-10 px-10 py-[120px] text-center"
     >
       <div className="space-y-4">

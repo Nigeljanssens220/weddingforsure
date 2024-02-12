@@ -36,8 +36,8 @@ const FAQ = () => {
               <Typography as="p">
                 Dit vonden wij een hele moeilijke keuze. We willen natuurlijk het liefst al onze vrienden en familie
                 uitnodigen, maar helaas is dat voor ons niet mogelijk. Kijk daarom goed naar de uitnodiging of de
-                uitnodiging geadresseerd is aan jou en je partner. Als dit het geval is, zijn jullie van harte harte
-                welkom! Als dit niet het geval is, dan is het helaas niet mogelijk om een plus één mee te nemen.
+                uitnodiging geadresseerd is aan jou en je partner. Als dit het geval is, zijn jullie van harte welkom!
+                Als dit niet het geval is, dan is het helaas niet mogelijk om een plus één mee te nemen.
               </Typography>
             </div>
             <div className="space-y-1">
@@ -110,7 +110,7 @@ const FAQ = () => {
                 Is er een deadline om te RSVPen?
               </Typography>
               <Typography as="p">
-                Omdat wij de hoeveelheid gasten en eventuele dieetwensen moeten doorgaven aan de trouwlocatie, hebben
+                Omdat wij de hoeveelheid gasten en eventuele dieetwensen moeten doorgeven aan de trouwlocatie, hebben
                 wij een harde deadline gesteld op 1 juni 2024 om aan te geven of je erbij kunt zijn.
               </Typography>
             </div>
@@ -130,7 +130,6 @@ const FAQ = () => {
                 Tijdens de ceremonie hanteren wij een no-phone policy. Wij willen dit moment zo puur mogelijk met jullie
                 beleven. Daarvoor en daarna mag je wat ons betreft gewoon lekker je innerlijke foto- of videograaf
                 uithangen. Wij zouden het wel waarderen als je de foto&apos;s en video&apos;s achteraf met ons deelt!
-                Dit kan via XX.
                 <br />
                 <br />
                 Daarnaast hebben wij een team aan professionele foto- en videografen die de hele dag aanwezig zullen
@@ -220,7 +219,7 @@ const FAQ = () => {
                 <br />
                 Tip: in de RSVP is er een optie om aan te geven of je geïnteresseerd bent in een hotelovernachting. Als
                 er genoeg interesse is, zullen wij een hotel proberen te regelen met een groepskorting en een kamer in
-                dezelfde sectie van het hotel
+                dezelfde sectie van het hotel.
               </Typography>
             </div>
             <div className="space-y-1">
