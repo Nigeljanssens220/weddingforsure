@@ -10,9 +10,9 @@ export const dynamic = 'force-static'
 const FAQ = () => {
   return (
     <SmoothScroll>
-      <section className="my-20 selection:bg-foreground selection:text-background md:my-32">
+      <section className="selection:bg-foreground selection:text-background md:my-32">
         <div className="mx-auto mb-6 grid max-w-screen-2xl gap-8 px-8 md:grid-cols-2 md:px-0">
-          <Typography as="h1" className="text-5xl text-black md:col-span-2 md:text-center md:text-7xl">
+          <Typography as="h1" className="mt-24 text-5xl text-black md:col-span-2 md:text-center md:text-7xl">
             Frequently Asked Questions
           </Typography>
           <Separator className="mt-6 bg-black md:md:col-span-2 md:my-20" />
