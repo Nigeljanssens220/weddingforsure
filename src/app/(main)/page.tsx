@@ -18,7 +18,7 @@ export default function Home() {
         <SmoothScroll>
           <HomeSection />
           <RSVPSection />
-          <div className="flex h-full max-h-40 w-full px-0 md:max-h-96">
+          <div className="flex h-full max-h-40 w-full max-w-screen-lg px-0 md:max-h-96">
             <Image
               quality={100}
               width={640}
@@ -45,7 +45,7 @@ export default function Home() {
             />
           </div>
           <TimelineSection />
-          <div className="flex h-full max-h-40 w-full px-0 md:max-h-96">
+          <div className="flex h-full max-h-40 w-full max-w-screen-lg px-0 md:max-h-96">
             <Image
               quality={100}
               width={640}
@@ -72,7 +72,7 @@ export default function Home() {
             />
           </div>
           <LocationSection />
-          <div className="flex h-full max-h-40 w-full px-0 md:max-h-96">
+          <div className="flex h-full max-h-40 w-full max-w-screen-lg px-0 md:max-h-96">
             <Image
               quality={100}
               width={640}
@@ -99,7 +99,7 @@ export default function Home() {
             />
           </div>
           <ThemeSection />
-          <div className="flex h-full max-h-40 w-full px-0 md:max-h-96">
+          <div className="flex h-full max-h-40 w-full max-w-screen-lg px-0 md:max-h-96">
             <Image
               quality={100}
               width={640}
@@ -126,7 +126,7 @@ export default function Home() {
             />
           </div>
           <SleepSection />
-          <div className="flex h-full max-h-40 w-full px-0 md:max-h-96">
+          <div className="flex h-full max-h-40 w-full max-w-screen-lg px-0 md:max-h-96">
             <Image
               quality={100}
               width={640}
