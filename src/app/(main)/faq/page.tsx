@@ -165,7 +165,9 @@ const FAQ = () => {
                 href="https://www.google.com/maps/place/Buitenplaats+Sparrendaal/@52.0542996,5.2774825,17z/data=!4m14!1m7!3m6!1s0x47c65d2234117707:0x7fe358ce772d9d71!2sBuitenplaats+Sparrendaal!8m2!3d52.0542963!4d5.2800574!16s%2Fg%2F120xcv72!3m5!1s0x47c65d2234117707:0x7fe358ce772d9d71!8m2!3d52.0542963!4d5.2800574!16s%2Fg%2F120xcv72?entry=ttu"
                 className="flex w-fit items-center"
               >
-                <span className="font-medium underline underline-offset-4">Buitenplaats Sparrendaal</span>
+                <Typography as="span" className="underline underline-offset-4">
+                  Buitenplaats Sparrendaal
+                </Typography>
                 <ExternalLink className="ml-2 size-4 text-foreground" />
               </a>
               <Typography as="p" className="italic">
@@ -180,17 +182,16 @@ const FAQ = () => {
                 Hoe zit het met de parkeergelegenheid?
               </Typography>
               <Typography as="p">
-                Omdat het niet mogelijk is om te parkeren voor de deur, raden wij aan om de door de trouwlocatie
-                aangegeven parkeerplaats te gebruiken. Hier is ruimte voor 75 voertuigen. Je kan gratis parkeren op het
-                nabijgelegen parkeerterrein aan de
+                Buitenplaats Sparrendaal heeft een eigen parkeerplaats aan de{' '}
                 <a
                   className="flex items-center underline underline-offset-4"
                   href="https://www.google.com/maps/place/Buitenplaats+Sparrendaal+Parking/@52.0540474,5.2813052,18z/data=!4m15!1m8!3m7!1s0x47c65d20c292a359:0x94e8d548975e4c8d!2sBosstraat,+Driebergen-Rijsenburg!3b1!8m2!3d52.0559424!4d5.2861761!16s%2Fg%2F1tdh7njr!3m5!1s0x47c65dc42d438fbf:0xe819261dd49886fc!8m2!3d52.0539319!4d5.281465!16s%2Fg%2F11rs9p3h1b?entry=ttu"
                 >
-                  Bosstraat, Driebergen-Rijsenburg
+                  Bosstraat, Driebergen-Rijsenburg.
                   <ExternalLinkIcon className="ml-2 size-4 text-foreground" />
                 </a>
-                Binnen 1 minuut wandel je via de parktuin naar het landhuis!
+                Je kan hier gratis parkeren en er is ruimte voor 75 voertuigen. Binnen 1 minuut wandel je via de
+                parktuin naar het landhuis!
               </Typography>
             </div>
             <div className="space-y-1">
@@ -267,8 +268,8 @@ const FAQ = () => {
                 Is er een open bar?
               </Typography>
               <Typography as="p">
-                Er is gedurende de hele dag een open bar. Daarnaast is er ook de mogelijkheid om een aantal vooraf
-                geselecteerde cocktails te bestellen tijdens het feest!
+                Er is gedurende de hele dag een open bar. Daarnaast is er waarschijnlijk ook de mogelijkheid om een
+                aantal vooraf geselecteerde cocktails te bestellen tijdens het feest!
               </Typography>
             </div>
           </article>

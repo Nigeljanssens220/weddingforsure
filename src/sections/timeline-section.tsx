@@ -14,9 +14,10 @@ export function TimelineSection() {
           Tijdlijn
         </Typography>
         <Typography as="p">
-          De volgorde van de dag zal in grote lijnen eruit zien als de onderstaande afbeelding. Uiteraard kan het
-          voorkomen dat we op bepaalde onderdelen uitlopen en die ruimte is er gelukkig. Het is wel belangrijk dat
-          jullie uiterlijk 14.30 aanwezig zijn voor het ontvangst met een lekker hapje en drankje!
+          Het is belangrijk dat jullie uiterlijk 14.30 aanwezig zijn voor het ontvangst met een lekker hapje en drankje.
+          De volgorde van de dag is in grote lijnen uitgetekend in de tijdlijn hieronder. Uiteraard kan het voorkomen
+          dat we op bepaalde onderdelen uitlopen en die ruimte is er gelukkig. We hopen dat jullie bij elk onderdeel van
+          de dag aanwezig kunnen zijn!
         </Typography>
       </div>
       <div className="relative flex min-h-96 flex-col gap-16">

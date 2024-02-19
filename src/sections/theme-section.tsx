@@ -13,9 +13,12 @@ export function ThemeSection() {
           Thema
         </Typography>
         <Typography as="p">
-          Uiteraard hopen we dat jullie met ons uitpakken in jullie outfit. Ons thema is <q>Whimsical Summer</q>, dat
-          betekent vooral veel kleur! Wat ons betreft is niks te gek. Wees vooral jezelf en trek aan waar jij je prettig
-          in voelt. We hebben er zin in!
+          Uiteraard hopen we dat jullie samen met ons uitpakken in jullie outfit. Ons thema is <q>Whimsical Summer</q>,
+          dat betekent vooral veel kleur! Wat ons betreft is niks te gek, dus een hoedje, een leuke print of mooie
+          kleuren zijn allemaal dingen die we graag willen zien. We willen jullie vragen om een formele outfit te
+          dragen, dit betekent een mooie jurk of jumpsuit voor de vrouwen en een pak voor de mannen. Maar het
+          allerbelangrijkste is: wees vooral jezelf en trek aan waar jij je prettig in voelt. We zijn benieuwd naar
+          jullie outfits!
         </Typography>
       </div>
       <div className="flex items-center justify-center gap-4">

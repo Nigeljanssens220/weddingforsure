@@ -21,8 +21,8 @@ export function RSVPSection() {
           You&apos;re invited!
         </Typography>
         <Typography as="p">
-          Wij vinden het super leuk om met jullie onze liefde te vieren op 7 augustus 2024 op Buitenplaats Sparrendaal.
-          Met jullie aanwezigheid zal het extra speciaal worden. Zijn jullie erbij?
+          Vier met ons de liefde op 7 augustus 2024 op Buitenplaats Sparrendaal. Jullie aanwezigheid maakt deze dag
+          extra speciaal, dus we hopen dat jullie erbij zijn! Laat via de RSVP pagina weten of jullie erbij zijn.
         </Typography>
       </div>
       <Link
