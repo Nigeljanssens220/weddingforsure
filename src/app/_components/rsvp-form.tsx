@@ -85,7 +85,7 @@ export default function RsvpForm() {
       <form
         ref={parent}
         onSubmit={formMethods.handleSubmit(handleCreateRsvp)}
-        className="container z-30 mx-auto my-6 flex w-full max-w-xl flex-col gap-8 bg-[#F8F5EF] p-8"
+        className="container z-30 mx-auto my-6 flex w-full max-w-xl flex-col gap-8 bg-[#F8F5EF] p-8 drop-shadow-md"
       >
         <Alert className="flex items-center justify-center">
           <AlertTitle>Reageer voor 1 juni 2024!</AlertTitle>
