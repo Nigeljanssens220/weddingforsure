@@ -27,8 +27,8 @@ export function ThemeSection() {
       <ScrollReveal>
         <Image
           quality={100}
-          src="https://res.cloudinary.com/dmdewqwqf/image/upload/f_auto,q_auto,w_auto/v1707564556/wedding/iadxuonoewqbdnyhmpbm.jpg"
-          alt="Wedding theme women"
+          src="https://res.cloudinary.com/dmdewqwqf/image/upload/f_auto,q_auto,w_auto/v1707564556/wedding/gzbb1alpagpgoyhgntdj.jpg"
+          alt="Wedding theme"
           width={400}
           height={100}
           className="object-cover"

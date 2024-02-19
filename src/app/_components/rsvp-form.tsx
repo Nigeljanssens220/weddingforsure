@@ -85,15 +85,15 @@ export default function RsvpForm() {
       <form
         ref={parent}
         onSubmit={formMethods.handleSubmit(handleCreateRsvp)}
-        className="container mx-auto my-6 flex w-full max-w-xl flex-col gap-8 bg-[#F8F5EF] p-8"
+        className="container z-30 mx-auto my-6 flex w-full max-w-xl flex-col gap-8 bg-[#F8F5EF] p-8"
       >
         <Alert className="flex items-center justify-center">
           <AlertTitle>Reageer voor 1 juni 2024!</AlertTitle>
         </Alert>
         {fields.map((field, index) => (
           <div key={field.id} className="flex flex-col gap-6">
-            <FormTextField name={`person.${index}.name` as const} placeholder="Name" />
-            <FormTextField name={`person.${index}.email` as const} type="email" placeholder="email@marryme.com" />
+            <FormTextField name={`person.${index}.name` as const} placeholder="Naam" />
+            <FormTextField name={`person.${index}.email` as const} type="email" placeholder="Emailadres" />
             <div className="flex items-start gap-2">
               {/* @ts-expect-error - bla */}
               <FormRadioGroup name={`person.${index}.menuOptions`} label="Diner voorkeuren" items={menuOptions} />
@@ -101,7 +101,7 @@ export default function RsvpForm() {
             <FormTextArea
               name={`person.${index}.dietaryRestrictions` as const}
               label="Overige opmerkingen diner"
-              placeholder="Geef hier aan of je allergieën hebt, of andere dieetwensen."
+              placeholder="Geef hier aan of je allergieën hebt of andere dieetwensen."
             />
             <FormRadioGroup
               name={`person.${index}.rsvpOptions`}

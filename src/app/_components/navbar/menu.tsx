@@ -2,7 +2,7 @@
 
 import { routes } from '@/lib/routes'
 import { cn } from '@/lib/utils'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { MenuIcon, X } from 'lucide-react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
@@ -81,94 +81,118 @@ const footerAnimation = {
 
 export function Menu({ className }: { className?: string }) {
   const [open, setOpen] = useState(false)
+  const [hidden, setHidden] = useState(false)
   const router = useRouter()
 
+  const { scrollY } = useScroll()
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    const previous = scrollY.getPrevious()
+    if (latest > previous && latest > 150) {
+      setHidden(true)
+    } else {
+      setHidden(false)
+    }
+  })
+
   return (
-    <div className={cn('fixed right-4 top-4 z-40 self-end overflow-hidden md:hidden', className)}>
-      <AnimatePresence mode="wait">
-        {open && (
-          <motion.div
-            variants={menuAnimation}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            className="fixed left-0 top-0 z-50 h-screen w-screen origin-top overflow-hidden bg-[#C6C4A4] p-4 text-[#5D5C4E]"
-          >
-            <div className="relative flex h-full flex-col justify-start">
-              <header className="fixed left-0 top-0 flex w-full justify-end p-4">
-                <button type="button" className="px-4 py-2" onClick={() => setOpen(false)}>
-                  <X className="h-6 w-6 text-[#5D5C4E]" />
-                </button>
-              </header>
-              <div className="mt-20 flex flex-col items-center gap-10">
-                <motion.div variants={footerAnimation} initial="initial" animate="open" exit="initial">
-                  <Image
-                    src="https://res.cloudinary.com/dmdewqwqf/image/upload/f_auto,q_auto/v1707564556/wedding/hm3nn14zgd3em9bzujgl.png"
-                    alt="s-n-logo"
-                    width={150}
-                    height={100}
-                    className="object-cover"
-                  />
-                </motion.div>
-                <nav>
-                  <motion.ul
-                    variants={linksAnimation}
-                    initial="initial"
-                    animate="open"
-                    exit="initial"
-                    className="flex flex-col items-center justify-center gap-4"
-                  >
-                    {routes.map(({ href, label }, idx) => (
-                      <li key={`item-${idx}`} className="overflow-hidden">
-                        <motion.div
-                          variants={mobileLinkAnimation}
-                          className="text-lg uppercase text-[#5D5C4E] sm:text-xl lg:text-2xl"
-                        >
-                          <button
-                            type="button"
-                            onClick={() => {
-                              setOpen(false)
-                              router.push(href)
-                            }}
+    <>
+      <motion.div
+        variants={{
+          visible: { y: 0 },
+          hidden: { y: '-100%' },
+        }}
+        animate={hidden ? 'hidden' : 'visible'}
+        transition={{ type: 'tween' }}
+        className="fixed flex w-screen items-center justify-center pt-4 md:hidden"
+      >
+        <Image src="/images/Initialen.png" alt="SN Logo" width={30} height={30} className="object-cover" />
+      </motion.div>
+      <header className={cn('fixed right-4 top-4 z-40 self-end overflow-hidden md:hidden', className)}>
+        <AnimatePresence mode="wait">
+          {open && (
+            <motion.div
+              variants={menuAnimation}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="fixed left-0 top-0 z-50 h-screen w-screen origin-top overflow-hidden bg-[#C6C4A4] p-4 text-[#5D5C4E]"
+            >
+              <div className="relative flex h-full flex-col justify-start">
+                <div className="fixed left-0 top-0 flex w-full justify-end p-4">
+                  <button type="button" className="px-4 py-2" onClick={() => setOpen(false)}>
+                    <X className="h-6 w-6 text-[#5D5C4E]" />
+                  </button>
+                </div>
+                <div className="mt-20 flex flex-col items-center gap-10">
+                  <motion.div variants={footerAnimation} initial="initial" animate="open" exit="initial">
+                    <Image
+                      src="https://res.cloudinary.com/dmdewqwqf/image/upload/f_auto,q_auto/v1707564556/wedding/hm3nn14zgd3em9bzujgl.png"
+                      alt="s-n-logo"
+                      width={150}
+                      height={100}
+                      className="object-cover"
+                    />
+                  </motion.div>
+                  <nav>
+                    <motion.ul
+                      variants={linksAnimation}
+                      initial="initial"
+                      animate="open"
+                      exit="initial"
+                      className="flex flex-col items-center justify-center gap-4"
+                    >
+                      {routes.map(({ href, label }, idx) => (
+                        <li key={`item-${idx}`} className="overflow-hidden">
+                          <motion.div
+                            variants={mobileLinkAnimation}
+                            className="text-lg uppercase text-[#5D5C4E] sm:text-xl lg:text-2xl"
                           >
-                            <Typography
-                              as="span"
-                              variant="xl/regular"
-                              className="font-eaves tracking-widest text-[#5D5C4E]"
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setOpen(false)
+                                router.push(href)
+                              }}
                             >
-                              {label}
-                            </Typography>
-                          </button>
-                        </motion.div>
-                      </li>
-                    ))}
-                  </motion.ul>
-                </nav>
+                              <Typography
+                                as="span"
+                                variant="xl/regular"
+                                className="font-eaves tracking-widest text-[#5D5C4E]"
+                              >
+                                {label}
+                              </Typography>
+                            </button>
+                          </motion.div>
+                        </li>
+                      ))}
+                    </motion.ul>
+                  </nav>
+                </div>
+                <motion.footer
+                  variants={footerAnimation}
+                  initial="initial"
+                  animate="open"
+                  exit="initial"
+                  className="fixed bottom-0 left-0 flex w-full justify-center gap-6 p-4 text-center text-sm uppercase"
+                >
+                  <Typography as="span" className="text-xs" variant="xs/regular">
+                    Buitenplaats Sparrendaal
+                  </Typography>
+                  <Typography as="span" className="text-xs" variant="xs/regular">
+                    •
+                  </Typography>
+                  <Typography as="span" className="text-xs" variant="xs/regular">
+                    07-08-2024
+                  </Typography>
+                </motion.footer>
               </div>
-              <motion.footer
-                variants={footerAnimation}
-                initial="initial"
-                animate="open"
-                exit="initial"
-                className="fixed bottom-0 left-0 flex w-full justify-center gap-6 p-4 text-center text-sm uppercase"
-              >
-                <Typography as="span" className="text-xs" variant="xs/regular">
-                  Buitenplaats Sparrendaal
-                </Typography>
-                <Typography as="span" className="text-xs" variant="xs/regular">
-                  •
-                </Typography>
-                <Typography as="span" className="text-xs" variant="xs/regular">
-                  07-08-2024
-                </Typography>
-              </motion.footer>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-      <button type="button" className="px-4 py-2" onClick={() => setOpen(true)}>
-        <MenuIcon className="size-6 text-[#464646]" />
-      </button>
-    </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+        <button type="button" className="px-4 py-2" onClick={() => setOpen(true)}>
+          <MenuIcon className="size-6 text-[#464646] " />
+        </button>
+      </header>
+    </>
   )
 }

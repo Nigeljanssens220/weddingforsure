@@ -63,7 +63,7 @@ const FAQ = () => {
                 natuurlijk dat je je goed voelt in wat je aanhebt en dat je er stralend uitziet!
                 <br />
                 <br />
-                <Link href="/#theme" className="underline underline-offset-4">
+                <Link href="/#thema" className="underline underline-offset-4">
                   Klik hier voor ons moodboard
                 </Link>
               </Typography>
@@ -187,7 +187,7 @@ const FAQ = () => {
                   className="flex items-center underline underline-offset-4"
                   href="https://www.google.com/maps/place/Buitenplaats+Sparrendaal+Parking/@52.0540474,5.2813052,18z/data=!4m15!1m8!3m7!1s0x47c65d20c292a359:0x94e8d548975e4c8d!2sBosstraat,+Driebergen-Rijsenburg!3b1!8m2!3d52.0559424!4d5.2861761!16s%2Fg%2F1tdh7njr!3m5!1s0x47c65dc42d438fbf:0xe819261dd49886fc!8m2!3d52.0539319!4d5.281465!16s%2Fg%2F11rs9p3h1b?entry=ttu"
                 >
-                  Bosstraat, Driebergen-Rijsenburg.
+                  Bosstraat, Driebergen-Rijsenburg
                   <ExternalLinkIcon className="ml-2 size-4 text-foreground" />
                 </a>
                 Binnen 1 minuut wandel je via de parktuin naar het landhuis!
