@@ -18,8 +18,7 @@ export function SleepSection() {
         </Typography>
         <Typography as="p">
           Willen jullie in de liefdesbubbel blijven met ons en dus nog niet terug naar het echte leven? Check de hotels
-          in de buurt. Wij zullen na de bruiloft in Hotel Bergse Bossen overnachten! Klik een kaartje aan voor meer
-          informatie.
+          in de buurt. Klik een kaartje aan voor meer informatie.
         </Typography>
       </div>
       <div className="space-y-4">
