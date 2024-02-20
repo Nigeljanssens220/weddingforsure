@@ -31,9 +31,9 @@ export function SleepSection() {
                   height={800}
                   src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_auto,c_crop,h_584/v1706796977/wedding/egwwzsiedldudl81nwpn.png"
                   alt="Kasteel Kerckebosch"
-                  className="left-0 top-0 max-h-[300px] rounded-md object-cover grayscale"
+                  className="left-0 top-0 max-h-[170px] rounded-md object-cover grayscale md:max-h-[305px]"
                 />
-                <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-10 p-4 text-start backdrop-blur-sm">
+                <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-10  px-4 py-2 text-start backdrop-blur-sm md:py-4">
                   <Typography className="text-white" as="h3" variant="xl/semibold">
                     Kasteel Kerckebosch
                   </Typography>
@@ -72,7 +72,7 @@ export function SleepSection() {
                   alt="Bergse Bossen"
                   className="left-0 top-0 rounded-md object-cover "
                 />
-                <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-10 p-4 text-start backdrop-blur-sm">
+                <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-10  px-4 py-2 text-start backdrop-blur-sm md:py-4">
                   <Typography className="text-white" as="h3" variant="xl/semibold">
                     Hotel Bergse Bossen
                   </Typography>
@@ -110,7 +110,7 @@ export function SleepSection() {
                   alt="Hotel Landgoed de Horst"
                   className="left-0 top-0 rounded-md object-cover"
                 />
-                <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-10 p-4 text-start backdrop-blur-sm">
+                <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-10  px-4 py-2 text-start backdrop-blur-sm md:py-4">
                   <Typography className="text-white" as="h3" variant="xl/semibold">
                     Landgoed de Horst
                   </Typography>
