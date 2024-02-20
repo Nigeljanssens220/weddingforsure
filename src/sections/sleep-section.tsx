@@ -30,11 +30,50 @@ export function SleepSection() {
                 <Image
                   width={1200}
                   height={800}
+                  src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_auto,c_crop,h_584/v1706796977/wedding/egwwzsiedldudl81nwpn.png"
+                  alt="Kasteel Kerckebosch"
+                  className="left-0 top-0 max-h-[300px] rounded-md object-cover grayscale"
+                />
+                <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-10 p-4 text-start backdrop-blur-sm">
+                  <Typography className="text-white" as="h3" variant="xl/semibold">
+                    Kasteel Kerckebosch
+                  </Typography>
+                </div>
+              </Card>
+            </DialogTrigger>
+            <DialogContent className="h-fit w-screen max-w-sm overflow-hidden rounded-md p-0 md:max-w-2xl lg:max-w-3xl">
+              <Image
+                width={1200}
+                height={800}
+                src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_1200,f_auto,q_auto,c_crop,h_584/v1706796977/wedding/egwwzsiedldudl81nwpn.png"
+                alt="Bergse Bossen"
+                className="scale-110 rounded-t-lg object-cover grayscale"
+              />
+              <div className="mt-6 flex flex-col gap-4 pb-6 md:mt-10">
+                <Typography variant="xl/regular" as="h3">
+                  Kasteel Kerckebosch
+                </Typography>
+                <Typography as="p">
+                  Kasteel Kerckebosch bevindt zich in een historisch gebouw uit 1904, met glas-in-loodramen en een
+                  unieke architectuur. Het ligt op slechts 11 km van Utrecht. Het rustige beboste terrein beschikt over
+                  een terras.
+                </Typography>
+              </div>
+            </DialogContent>
+          </Dialog>
+        </ScrollReveal>
+        <ScrollReveal>
+          <Dialog>
+            <DialogTrigger>
+              <Card className="relative w-screen max-w-sm rounded-md md:max-w-2xl lg:max-w-3xl">
+                <Image
+                  width={1200}
+                  height={800}
                   src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_auto,f_auto,q_auto/v1706796977/wedding/w4ns4656otvtb7dqmwl9.png"
                   alt="Bergse Bossen"
                   className="left-0 top-0 rounded-md object-cover "
                 />
-                <div className="absolute bottom-4 left-4">
+                <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-10 p-4 text-start backdrop-blur-sm">
                   <Typography className="text-white" as="h3" variant="xl/semibold">
                     Hotel Bergse Bossen
                   </Typography>
@@ -47,16 +86,15 @@ export function SleepSection() {
                 height={800}
                 src="https://res.cloudinary.com/dmdewqwqf/image/upload/w_1200,f_auto,q_auto/v1706796977/wedding/w4ns4656otvtb7dqmwl9.png"
                 alt="Bergse Bossen"
-                className="scale-110 rounded-t-lg object-fill"
+                className="scale-110 rounded-t-lg object-fill "
               />
               <div className="mt-6 flex flex-col gap-4 pb-6 md:mt-10">
                 <Typography variant="xl/regular" as="h3">
                   Hotel Bergse Bossen
                 </Typography>
                 <Typography as="p">
-                  Het hotel waar wij de nacht doorbrengen! Kom de volgende dag gezellig met ons nagenieten bij het
-                  ontbijt. We kunnen een groepsreservering maken met 5% korting. Dus laat in de RSVP weten of je hier
-                  wilt overnachten!
+                  Het hotel is gevestigd op een rustige locatie in de bossen van het Nationaal Park Utrechtse Heuvelrug.
+                  De meeste kamers bieden uitzicht op de natuur.
                 </Typography>
               </div>
             </DialogContent>
@@ -73,7 +111,7 @@ export function SleepSection() {
                   alt="Hotel Landgoed de Horst"
                   className="left-0 top-0 rounded-md object-cover"
                 />
-                <div className="absolute bottom-4 left-4">
+                <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-10 p-4 text-start backdrop-blur-sm">
                   <Typography className="text-white" as="h3" variant="xl/semibold">
                     Landgoed de Horst
                   </Typography>
