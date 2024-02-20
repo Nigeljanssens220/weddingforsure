@@ -24,7 +24,7 @@ export default function Login() {
       <div className="absolute top-0 -z-10 h-dvh w-screen" />
       <div className="flex flex-col items-center gap-10 pt-20 text-center">
         <ScrollReveal delay={1}>
-          <Typography as="p" variant="md/regular" className="max-w-[20ch] uppercase text-[#464646]">
+          <Typography as="p" variant="md/regular" className="max-w-[20ch] font-eaves uppercase text-[#464646]">
             Je bent uitgenodigd voor de bruiloft van
           </Typography>
         </ScrollReveal>
@@ -33,7 +33,7 @@ export default function Login() {
             <Hero variant="light" className="-ml-4 font-sloop text-[#464646]">
               Shinta
             </Hero>
-            <Typography variant="xl/regular" className="-mt-2 self-center uppercase text-[#464646]">
+            <Typography variant="xl/regular" className="-mt-2 self-center font-eaves uppercase text-[#464646]">
               EN
             </Typography>
             <Hero variant="light" className="-ml-4 font-sloop text-[#464646]">
