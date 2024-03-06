@@ -35,9 +35,10 @@ const FAQ = () => {
               </Typography>
               <Typography as="p">
                 Dit vonden wij een hele moeilijke keuze. We willen natuurlijk het liefst al onze vrienden en familie
-                uitnodigen, maar helaas is dat voor ons niet mogelijk. Kijk daarom goed naar de uitnodiging of de
-                uitnodiging geadresseerd is aan jou en je partner. Als dit het geval is, zijn jullie van harte welkom!
-                Als dit niet het geval is, dan is het helaas niet mogelijk om een plus één mee te nemen.
+                uitnodigen, maar wij hebben hebben ervoor gekozen om onze bruiloft klein en intiem te houden. Kijk
+                daarom goed naar de uitnodiging of de uitnodiging geadresseerd is aan jou en je partner. Als dit het
+                geval is, zijn jullie van harte welkom! Als dit niet het geval is, dan is het helaas niet mogelijk om
+                een plus één mee te nemen.
               </Typography>
             </div>
             <div className="space-y-1">

@@ -6,6 +6,7 @@ import { schemaCreateRSVP, type SchemaCreateRSVP } from '@/schemas/rsvp'
 import { api } from '@/trpc/react'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { InfoIcon } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { useFieldArray, useForm } from 'react-hook-form'
 import { toast } from 'sonner'
@@ -15,6 +16,7 @@ import { FormTextField } from './form/text-field'
 import { Alert, AlertTitle } from './ui/alert'
 import { Button } from './ui/button'
 import { Form } from './ui/form'
+import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 import { Switch } from './ui/switch'
 import Typography from './ui/typography'
 
@@ -115,11 +117,27 @@ export default function RsvpForm() {
               />
             )}
             {index === 0 && (
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-4">
                 <Switch id="plus-one" checked={fields.length > 1} onCheckedChange={handleAddOrRemovePlusOne} />
                 <Typography as="label" htmlFor="plus-one" variant="md/regular">
                   Plus een knapperd?
                 </Typography>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button variant="ghost" size="icon" className=" flex items-center">
+                      <InfoIcon className="-ml-2 size-4 text-[#464646]" />
+                      <span className="sr-only">open chefs menu</span>
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent>
+                    <Typography as="p">
+                      We hebben hebben ervoor gekozen om onze bruiloft klein en intiem te houden. Kijk daarom goed naar
+                      de uitnodiging of de uitnodiging geadresseerd is aan jou en je partner. Als dit het geval is, zijn
+                      jullie beiden van harte welkom! Als dit niet het geval is, dan is het helaas niet mogelijk om een
+                      plus één mee te nemen. We hopen dat jullie begrip hebben voor deze keuze!
+                    </Typography>
+                  </PopoverContent>
+                </Popover>
               </div>
             )}
           </div>

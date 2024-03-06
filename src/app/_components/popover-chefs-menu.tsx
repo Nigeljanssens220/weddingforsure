@@ -8,8 +8,8 @@ export const PopoverChefsMenu = ({ menu }: { menu?: 'Regulier' | 'Veggie' }) => 
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant="ghost" size="icon" className="-mt-0.5 flex items-center">
-          <InfoIcon className="size-4" />
+        <Button variant="ghost" size="icon" className="flex items-center">
+          <InfoIcon className="-ml-2 size-4 text-[#464646]" />
           <span className="sr-only">open chefs menu</span>
         </Button>
       </PopoverTrigger>
